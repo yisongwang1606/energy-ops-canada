@@ -1,0 +1,19 @@
+services:
+  energy-ops-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      ENERGY_ML_ENABLED: "true"
+      ENERGY_ML_BASE_URL: http://energy-ops-ml:8001
+    ports:
+      - "8080:8080"
+    depends_on:
+      - energy-ops-ml
+
+  energy-ops-ml:
+    build:
+      context: ./ml-service
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"

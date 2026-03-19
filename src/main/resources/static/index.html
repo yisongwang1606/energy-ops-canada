@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Ops Canada</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <p class="eyebrow">Energy Operations</p>
+                <h1>Canada Control Room</h1>
+                <p class="subtitle">English UI, Canadian metric units, Alberta demo data, and a full alert-to-work-order loop.</p>
+            </div>
+
+            <div class="locale-card">
+                <span class="locale-pill">en-CA</span>
+                <span class="locale-pill">Metric</span>
+                <span class="locale-pill">MT</span>
+            </div>
+
+            <nav class="nav">
+                <button class="nav-link active" data-section="dashboard">Dashboard</button>
+                <button class="nav-link" data-section="assets">Sites & Assets</button>
+                <button class="nav-link" data-section="alerts">Alerts</button>
+                <button class="nav-link" data-section="work-orders">Work Orders</button>
+                <button class="nav-link" data-section="maintenance">Maintenance</button>
+                <button class="nav-link" data-section="audit">Audit</button>
+            </nav>
+
+            <div class="session-card">
+                <p class="label">Signed In</p>
+                <p id="session-name">Not signed in</p>
+                <p id="session-role" class="muted">Awaiting login</p>
+                <button id="logout-button" class="ghost-button" type="button">Log Out</button>
+            </div>
+        </aside>
+
+        <main class="content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">Operational Overview</p>
+                    <h2 id="page-title">Dashboard</h2>
+                </div>
+                <div class="topbar-meta">
+                    <div class="meta-chip">
+                        <span class="meta-label">Timezone</span>
+                        <strong>America/Edmonton</strong>
+                    </div>
+                    <div class="meta-chip">
+                        <span class="meta-label">Demo Scope</span>
+                        <strong>2 Sites / 5 Assets</strong>
+                    </div>
+                </div>
+            </header>
+
+            <section class="panel-section active" data-panel="dashboard">
+                <div id="metric-grid" class="metric-grid"></div>
+
+                <div class="dashboard-grid">
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">24-Hour Trend</p>
+                                <h3>Health vs Failure Risk</h3>
+                            </div>
+                        </div>
+                        <canvas id="trend-canvas" width="960" height="320" aria-label="Trend chart"></canvas>
+                    </article>
+
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">Site Risk</p>
+                                <h3>Canadian Site Summary</h3>
+                            </div>
+                        </div>
+                        <div id="site-risk-list" class="stack-list"></div>
+                    </article>
+                </div>
+
+                <div class="dashboard-grid">
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">Asset Ranking</p>
+                                <h3>Highest Failure Risk</h3>
+                            </div>
+                        </div>
+                        <div id="asset-risk-table" class="table-wrap"></div>
+                    </article>
+
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">Queue Snapshot</p>
+                                <h3>Recent Alerts & Work Orders</h3>
+                            </div>
+                        </div>
+                        <div class="double-stack">
+                            <div>
+                                <p class="label">Recent Alerts</p>
+                                <div id="recent-alerts-list" class="mini-list"></div>
+                            </div>
+                            <div>
+                                <p class="label">Open Work Orders</p>
+                                <div id="recent-workorders-list" class="mini-list"></div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel-section" data-panel="assets">
+                <div class="two-column-layout">
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">Sites</p>
+                                <h3>Canadian Operations Footprint</h3>
+                            </div>
+                        </div>
+                        <div id="site-table" class="table-wrap"></div>
+                    </article>
+
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">Assets</p>
+                                <h3>Live Asset Register</h3>
+                            </div>
+                        </div>
+                        <div id="asset-table" class="table-wrap"></div>
+                    </article>
+                </div>
+
+                <div class="two-column-layout">
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">Asset Detail</p>
+                                <h3 id="asset-detail-title">Select an asset</h3>
+                            </div>
+                        </div>
+                        <div id="asset-detail-body" class="detail-body empty-state">Choose an asset from the table to inspect telemetry, active alerts, and work orders.</div>
+                    </article>
+
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">Manual Reading Ingest</p>
+                                <h3>Ingest Additional Telemetry</h3>
+                            </div>
+                        </div>
+                        <form id="reading-form" class="form-grid">
+                            <label>
+                                <span>Asset</span>
+                                <select name="assetId" required></select>
+                            </label>
+                            <label>
+                                <span>Site</span>
+                                <select name="siteId" required></select>
+                            </label>
+                            <label>
+                                <span>Timestamp</span>
+                                <input type="datetime-local" name="timestamp" required>
+                            </label>
+                            <label>
+                                <span>Temperature (deg C)</span>
+                                <input type="number" step="0.1" name="temperatureC" required>
+                            </label>
+                            <label>
+                                <span>Pressure (kPa)</span>
+                                <input type="number" step="0.1" name="pressureKpa" required>
+                            </label>
+                            <label>
+                                <span>Vibration (mm/s)</span>
+                                <input type="number" step="0.01" name="vibrationMmS" required>
+                            </label>
+                            <label>
+                                <span>Current (A)</span>
+                                <input type="number" step="0.1" name="currentA" required>
+                            </label>
+                            <label>
+                                <span>Flow Rate (m3/h)</span>
+                                <input type="number" step="0.1" name="flowRateM3H" required>
+                            </label>
+                            <button class="primary-button" type="submit">Submit Reading</button>
+                        </form>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel-section" data-panel="alerts">
+                <article class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <p class="eyebrow">Alert Centre</p>
+                            <h3>Open and Historical Alerts</h3>
+                        </div>
+                        <button id="export-alerts-button" class="ghost-button" type="button">Export CSV</button>
+                    </div>
+                    <div id="alert-table" class="table-wrap"></div>
+                </article>
+            </section>
+
+            <section class="panel-section" data-panel="work-orders">
+                <div class="two-column-layout">
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">Work Orders</p>
+                                <h3>Maintenance Execution Queue</h3>
+                            </div>
+                        </div>
+                        <div id="workorder-table" class="table-wrap"></div>
+                    </article>
+
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">Create Work Order</p>
+                                <h3>From Alert or Asset</h3>
+                            </div>
+                        </div>
+                        <form id="workorder-form" class="form-grid">
+                            <label>
+                                <span>Alert</span>
+                                <select name="alertId">
+                                    <option value="">No linked alert</option>
+                                </select>
+                            </label>
+                            <label>
+                                <span>Asset</span>
+                                <select name="assetId">
+                                    <option value="">Use alert asset</option>
+                                </select>
+                            </label>
+                            <label>
+                                <span>Priority</span>
+                                <select name="priority">
+                                    <option value="HIGH">High</option>
+                                    <option value="MEDIUM">Medium</option>
+                                    <option value="LOW">Low</option>
+                                </select>
+                            </label>
+                            <label>
+                                <span>Assigned To</span>
+                                <input type="text" name="assignedTo" placeholder="morgan.tech">
+                            </label>
+                            <label class="span-2">
+                                <span>Title</span>
+                                <input type="text" name="title" required>
+                            </label>
+                            <label class="span-2">
+                                <span>Description</span>
+                                <textarea name="description" rows="4"></textarea>
+                            </label>
+                            <label>
+                                <span>Due Date</span>
+                                <input type="date" name="dueDate">
+                            </label>
+                            <button class="primary-button" type="submit">Create Work Order</button>
+                        </form>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel-section" data-panel="maintenance">
+                <div class="two-column-layout">
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">Maintenance Records</p>
+                                <h3>Root Cause and Field Actions</h3>
+                            </div>
+                        </div>
+                        <div id="maintenance-table" class="table-wrap"></div>
+                    </article>
+
+                    <article class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <p class="eyebrow">Add Record</p>
+                                <h3>Maintenance Closeout</h3>
+                            </div>
+                        </div>
+                        <form id="maintenance-form" class="form-grid">
+                            <label>
+                                <span>Work Order</span>
+                                <select name="workOrderId" required></select>
+                            </label>
+                            <label>
+                                <span>Downtime (min)</span>
+                                <input type="number" name="downtimeMinutes">
+                            </label>
+                            <label class="span-2">
+                                <span>Root Cause</span>
+                                <input type="text" name="rootCause" required>
+                            </label>
+                            <label class="span-2">
+                                <span>Action Taken</span>
+                                <textarea name="actionTaken" rows="4" required></textarea>
+                            </label>
+                            <label class="span-2">
+                                <span>Parts Replaced</span>
+                                <input type="text" name="partsReplaced">
+                            </label>
+                            <label class="span-2">
+                                <span>Notes</span>
+                                <textarea name="notes" rows="3"></textarea>
+                            </label>
+                            <button class="primary-button" type="submit">Record Maintenance</button>
+                        </form>
+                    </article>
+                </div>
+            </section>
+
+            <section class="panel-section" data-panel="audit">
+                <article class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <p class="eyebrow">Audit Trail</p>
+                            <h3>Key Operational Actions</h3>
+                        </div>
+                    </div>
+                    <div id="audit-table" class="table-wrap"></div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <div id="login-overlay" class="login-overlay">
+        <div class="login-card">
+            <p class="eyebrow">Energy Ops MVP</p>
+            <h2>Sign in to the Canadian demo workspace</h2>
+            <p class="subtitle">Use one of the seeded accounts below. Passwords are demo-only and documented in the README.</p>
+
+            <div class="demo-users">
+                <button class="demo-user" type="button" data-username="admin.ca" data-password="admin123">admin.ca / admin123</button>
+                <button class="demo-user" type="button" data-username="ops.lead" data-password="ops123">ops.lead / ops123</button>
+                <button class="demo-user" type="button" data-username="morgan.tech" data-password="tech123">morgan.tech / tech123</button>
+            </div>
+
+            <form id="login-form" class="login-form">
+                <label>
+                    <span>Username</span>
+                    <input type="text" name="username" autocomplete="username" required>
+                </label>
+                <label>
+                    <span>Password</span>
+                    <input type="password" name="password" autocomplete="current-password" required>
+                </label>
+                <button class="primary-button" type="submit">Enter Control Room</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+target/
+.idea/
+.DS_Store
+*.log
+__starter/
+__starter.zip

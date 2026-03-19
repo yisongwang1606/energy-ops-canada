@@ -1,0 +1,5 @@
+target/
+.git/
+__starter/
+__starter.zip
+README.md

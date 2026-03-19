@@ -1,0 +1,501 @@
+﻿reading_id,timestamp,site_id,site_name,asset_id,asset_name,asset_type,temperature_c,pressure_kpa,vibration_mm_s,current_a,flow_rate_m3_h,health_score,anomaly_score,predicted_failure_risk,operating_status,alert_flag,alert_type,maintenance_priority
+R00001,2026-01-06 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,61.1,938.0,1.34,118.8,232.7,97.0,0.08,0.091,Normal,N,,Low
+R00002,2026-01-06 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,61.3,923.5,2.22,119.5,242.8,97.0,0.08,0.091,Normal,N,,Low
+R00003,2026-01-06 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,61.5,898.2,1.5,136.9,246.2,97.0,0.08,0.091,Normal,N,,Low
+R00004,2026-01-06 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,72.8,774.6,2.4,137.0,215.3,93.0,0.36,0.178,Normal,N,,Low
+R00005,2026-01-06 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,72.2,910.3,2.58,131.6,248.3,97.0,0.08,0.091,Normal,N,,Low
+R00006,2026-01-06 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,61.1,929.5,2.03,147.6,225.0,97.0,0.08,0.091,Normal,N,,Low
+R00007,2026-01-06 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,69.9,972.9,1.87,146.9,246.8,97.0,0.08,0.091,Normal,N,,Low
+R00008,2026-01-06 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,67.5,942.7,1.68,137.4,236.1,97.0,0.08,0.091,Normal,N,,Low
+R00009,2026-01-06 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,65.5,879.2,2.67,124.4,246.8,97.0,0.08,0.091,Normal,N,,Low
+R00010,2026-01-06 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,64.9,918.3,2.32,138.1,255.7,97.0,0.08,0.091,Normal,N,,Low
+R00011,2026-01-06 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,69.6,892.9,1.33,140.4,247.6,97.0,0.08,0.091,Normal,N,,Low
+R00012,2026-01-06 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,60.0,962.8,1.55,123.9,254.0,97.0,0.08,0.091,Normal,N,,Low
+R00013,2026-01-06 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.4,864.5,2.78,124.5,235.5,97.0,0.08,0.091,Normal,N,,Low
+R00014,2026-01-06 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,67.6,973.7,1.46,142.9,231.9,97.0,0.08,0.091,Normal,N,,Low
+R00015,2026-01-06 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,70.2,940.7,4.21,134.4,247.4,84.3,0.319,0.249,Monitor,N,,Low
+R00016,2026-01-06 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,61.3,872.7,1.47,120.2,246.2,97.0,0.08,0.091,Normal,N,,Low
+R00017,2026-01-06 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,59.4,869.8,2.87,126.3,242.6,97.0,0.08,0.091,Normal,N,,Low
+R00018,2026-01-06 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,57.6,892.8,2.59,142.3,222.9,97.0,0.08,0.091,Normal,N,,Low
+R00019,2026-01-06 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,68.6,862.2,1.97,119.1,220.9,97.0,0.08,0.091,Normal,N,,Low
+R00020,2026-01-06 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,64.7,964.1,3.06,138.3,227.5,97.0,0.08,0.091,Normal,N,,Low
+R00021,2026-01-06 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,62.7,883.8,1.86,127.1,244.4,97.0,0.08,0.091,Normal,N,,Low
+R00022,2026-01-06 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,64.2,862.4,2.89,129.1,207.6,97.0,0.08,0.091,Normal,N,,Low
+R00023,2026-01-06 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,63.8,861.7,1.36,131.7,218.7,97.0,0.08,0.091,Normal,N,,Low
+R00024,2026-01-06 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,70.1,923.6,1.92,130.6,217.1,97.0,0.08,0.091,Normal,N,,Low
+R00025,2026-01-07 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,61.3,937.3,1.71,120.0,254.9,97.0,0.08,0.091,Normal,N,,Low
+R00026,2026-01-07 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,59.4,889.0,2.69,128.7,249.6,97.0,0.08,0.091,Normal,N,,Low
+R00027,2026-01-07 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,68.0,939.1,2.56,138.8,217.9,97.0,0.08,0.091,Normal,N,,Low
+R00028,2026-01-07 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,60.9,895.3,2.4,137.3,238.6,97.0,0.08,0.091,Normal,N,,Low
+R00029,2026-01-07 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,70.9,914.4,1.44,137.8,249.3,97.0,0.08,0.091,Normal,N,,Low
+R00030,2026-01-07 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,65.0,876.0,2.83,144.7,220.4,97.0,0.08,0.091,Normal,N,,Low
+R00031,2026-01-07 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,64.9,970.1,2.71,127.1,254.3,97.0,0.08,0.091,Normal,N,,Low
+R00032,2026-01-07 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,65.7,886.8,2.91,145.2,219.0,97.0,0.08,0.091,Normal,N,,Low
+R00033,2026-01-07 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,65.0,968.7,2.58,141.4,257.1,97.0,0.08,0.091,Normal,N,,Low
+R00034,2026-01-07 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,62.9,917.7,2.53,120.6,231.2,97.0,0.08,0.091,Normal,N,,Low
+R00035,2026-01-07 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,72.3,939.4,2.86,144.6,255.8,97.0,0.08,0.091,Normal,N,,Low
+R00036,2026-01-07 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,71.9,793.3,2.39,135.4,229.2,94.5,0.256,0.146,Normal,N,,Low
+R00037,2026-01-07 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,64.1,954.8,2.7,123.3,252.7,97.0,0.08,0.091,Normal,N,,Low
+R00038,2026-01-07 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.2,861.8,2.07,125.6,233.8,97.0,0.08,0.091,Normal,N,,Low
+R00039,2026-01-07 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.5,942.4,2.18,138.9,215.2,97.0,0.08,0.091,Normal,N,,Low
+R00040,2026-01-07 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,65.4,897.0,2.21,140.4,236.1,97.0,0.08,0.091,Normal,N,,Low
+R00041,2026-01-07 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,65.5,847.0,1.67,137.5,203.5,97.0,0.08,0.091,Normal,N,,Low
+R00042,2026-01-07 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,64.3,892.9,2.36,124.9,209.1,97.0,0.08,0.091,Normal,N,,Low
+R00043,2026-01-07 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,67.9,949.3,1.83,132.9,225.7,97.0,0.08,0.091,Normal,N,,Low
+R00044,2026-01-07 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,58.5,897.5,2.2,134.7,237.7,97.0,0.08,0.091,Normal,N,,Low
+R00045,2026-01-07 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,61.7,899.7,2.71,133.7,215.2,97.0,0.08,0.091,Normal,N,,Low
+R00046,2026-01-07 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,63.8,896.5,1.66,140.5,212.8,97.0,0.08,0.091,Normal,N,,Low
+R00047,2026-01-07 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,59.4,898.3,1.96,138.7,239.8,97.0,0.08,0.091,Normal,N,,Low
+R00048,2026-01-07 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,57.6,921.5,2.74,127.1,245.9,97.0,0.08,0.091,Normal,N,,Low
+R00049,2026-01-08 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,68.3,966.7,1.64,128.5,245.9,97.0,0.08,0.091,Normal,N,,Low
+R00050,2026-01-08 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,70.5,980.9,2.7,136.5,231.6,97.0,0.08,0.091,Normal,N,,Low
+R00051,2026-01-08 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,61.3,898.8,1.89,128.4,233.4,97.0,0.08,0.091,Normal,N,,Low
+R00052,2026-01-08 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.2,869.2,1.58,145.4,214.7,97.0,0.08,0.091,Normal,N,,Low
+R00053,2026-01-08 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,71.6,892.0,1.67,133.2,232.9,97.0,0.08,0.091,Normal,N,,Low
+R00054,2026-01-08 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,73.7,960.4,1.89,147.2,256.3,97.0,0.08,0.091,Normal,N,,Low
+R00055,2026-01-08 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,72.5,943.3,1.83,130.9,254.8,97.0,0.08,0.091,Normal,N,,Low
+R00056,2026-01-08 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,67.0,933.4,1.53,121.9,237.9,97.0,0.08,0.091,Normal,N,,Low
+R00057,2026-01-08 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,65.3,918.0,1.64,139.4,258.7,97.0,0.08,0.091,Normal,N,,Low
+R00058,2026-01-08 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.3,935.0,1.82,128.2,248.7,97.0,0.08,0.091,Normal,N,,Low
+R00059,2026-01-08 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,68.2,919.9,2.04,126.5,241.4,97.0,0.08,0.091,Normal,N,,Low
+R00060,2026-01-08 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.3,877.5,1.9,125.5,243.6,97.0,0.08,0.091,Normal,N,,Low
+R00061,2026-01-08 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,58.2,902.6,2.26,132.9,254.8,97.0,0.08,0.091,Normal,N,,Low
+R00062,2026-01-08 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,62.5,887.2,2.38,136.6,239.9,97.0,0.08,0.091,Normal,N,,Low
+R00063,2026-01-08 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,67.6,918.8,2.33,138.9,223.7,97.0,0.08,0.091,Normal,N,,Low
+R00064,2026-01-08 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,67.0,849.9,1.9,131.7,212.4,97.0,0.08,0.091,Normal,N,,Low
+R00065,2026-01-08 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,60.4,879.0,1.87,119.1,226.0,97.0,0.08,0.091,Normal,N,,Low
+R00066,2026-01-08 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.4,938.6,1.42,129.5,229.7,97.0,0.08,0.091,Normal,N,,Low
+R00067,2026-01-08 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,67.2,957.1,2.29,131.1,249.5,97.0,0.08,0.091,Normal,N,,Low
+R00068,2026-01-08 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.6,875.9,1.77,118.7,234.9,97.0,0.08,0.091,Normal,N,,Low
+R00069,2026-01-08 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,57.1,872.4,1.38,120.7,229.1,97.0,0.08,0.091,Normal,N,,Low
+R00070,2026-01-08 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,59.9,872.5,1.66,116.0,230.6,97.0,0.08,0.091,Normal,N,,Low
+R00071,2026-01-08 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,70.0,905.4,1.89,130.7,232.3,97.0,0.08,0.091,Normal,N,,Low
+R00072,2026-01-08 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,67.7,850.7,2.36,133.3,242.1,97.0,0.08,0.091,Normal,N,,Low
+R00073,2026-01-09 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.1,872.8,1.91,144.9,246.6,97.0,0.08,0.091,Normal,N,,Low
+R00074,2026-01-09 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,64.5,937.8,2.46,121.3,216.9,96.9,0.086,0.093,Normal,N,,Low
+R00075,2026-01-09 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,60.1,934.7,1.95,127.0,226.5,96.8,0.091,0.095,Normal,N,,Low
+R00076,2026-01-09 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,63.6,907.1,2.7,147.5,222.3,96.6,0.097,0.098,Normal,N,,Low
+R00077,2026-01-09 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.5,881.6,2.54,124.9,250.8,96.5,0.102,0.1,Normal,N,,Low
+R00078,2026-01-09 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,69.6,967.3,2.22,143.1,258.6,96.4,0.108,0.102,Normal,N,,Low
+R00079,2026-01-09 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.0,971.9,3.23,139.2,255.4,96.3,0.113,0.104,Normal,N,,Low
+R00080,2026-01-09 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,72.8,877.1,2.98,144.1,239.2,96.2,0.119,0.106,Normal,N,,Low
+R00081,2026-01-09 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,71.3,919.9,2.6,141.6,220.6,96.0,0.124,0.108,Normal,N,,Low
+R00082,2026-01-09 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,64.4,886.8,4.04,129.2,239.5,85.6,0.325,0.238,Normal,N,,Low
+R00083,2026-01-09 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,69.7,934.9,2.48,136.8,253.6,95.8,0.136,0.112,Normal,N,,Low
+R00084,2026-01-09 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,74.2,849.6,2.3,140.8,242.1,95.7,0.141,0.114,Normal,N,,Low
+R00085,2026-01-09 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,71.5,959.7,2.05,126.0,215.2,95.6,0.147,0.116,Normal,N,,Low
+R00086,2026-01-09 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,61.4,840.6,1.88,129.1,212.4,95.4,0.152,0.119,Normal,N,,Low
+R00087,2026-01-09 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,72.8,950.1,3.29,132.7,234.9,95.3,0.158,0.121,Normal,N,,Low
+R00088,2026-01-09 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,61.6,854.7,2.47,126.7,228.7,95.2,0.163,0.123,Normal,N,,Low
+R00089,2026-01-09 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,67.2,906.4,2.92,123.4,196.3,95.1,0.169,0.125,Normal,N,,Low
+R00090,2026-01-09 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,72.2,889.6,3.34,133.7,222.2,94.4,0.185,0.134,Normal,N,,Low
+R00091,2026-01-09 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,63.1,852.4,2.7,124.6,238.5,94.8,0.18,0.129,Normal,N,,Low
+R00092,2026-01-09 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,64.8,912.4,3.42,132.6,200.2,93.0,0.217,0.152,Normal,N,,Low
+R00093,2026-01-09 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,66.7,837.8,2.15,138.9,197.6,94.6,0.191,0.133,Normal,N,,Low
+R00094,2026-01-09 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,64.7,880.7,3.41,146.1,211.5,92.9,0.226,0.155,Normal,N,,Low
+R00095,2026-01-09 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,86.9,939.4,2.06,138.2,226.7,78.0,0.638,0.363,Monitor,Y,High Temperature,Medium
+R00096,2026-01-09 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,71.2,925.0,2.85,131.3,213.6,94.2,0.208,0.14,Normal,N,,Low
+R00097,2026-01-10 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,62.8,830.0,3.08,139.9,221.0,94.1,0.213,0.141,Normal,N,,Low
+R00098,2026-01-10 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,73.7,896.0,3.2,143.1,202.5,94.0,0.219,0.143,Normal,N,,Low
+R00099,2026-01-10 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,77.7,898.8,2.15,145.7,209.4,91.3,0.292,0.181,Normal,N,,Low
+R00100,2026-01-10 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-101,Feed Pump A,Pump,71.4,922.2,3.42,136.1,223.1,92.1,0.262,0.168,Normal,N,,Low
+R00101,2026-01-06 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,64.9,897.5,2.23,126.6,235.5,97.0,0.08,0.091,Normal,N,,Low
+R00102,2026-01-06 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.3,895.0,1.14,121.4,217.9,97.0,0.08,0.091,Normal,N,,Low
+R00103,2026-01-06 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,56.3,868.7,2.24,140.1,212.8,97.0,0.08,0.091,Normal,N,,Low
+R00104,2026-01-06 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,56.4,971.5,2.11,136.8,212.4,97.0,0.08,0.091,Normal,N,,Low
+R00105,2026-01-06 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,62.0,934.5,2.51,140.4,237.3,97.0,0.08,0.091,Normal,N,,Low
+R00106,2026-01-06 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,62.4,895.1,1.52,122.0,251.0,97.0,0.08,0.091,Normal,N,,Low
+R00107,2026-01-06 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,68.4,956.3,1.39,157.3,238.7,90.5,0.346,0.198,Normal,N,,Low
+R00108,2026-01-06 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.4,944.8,2.4,129.4,225.1,97.0,0.08,0.091,Normal,N,,Low
+R00109,2026-01-06 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,63.9,955.6,1.65,129.3,225.9,97.0,0.08,0.091,Normal,N,,Low
+R00110,2026-01-06 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,66.6,861.6,1.82,144.3,213.5,97.0,0.08,0.091,Normal,N,,Low
+R00111,2026-01-06 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,64.2,925.2,4.09,139.6,251.0,83.1,0.341,0.263,Monitor,N,,Low
+R00112,2026-01-06 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,66.3,911.8,1.73,126.8,236.4,97.0,0.08,0.091,Normal,N,,Low
+R00113,2026-01-06 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,64.5,882.9,1.68,138.0,232.1,97.0,0.08,0.091,Normal,N,,Low
+R00114,2026-01-06 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,55.7,956.3,2.14,117.2,207.0,97.0,0.08,0.091,Normal,N,,Low
+R00115,2026-01-06 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,63.9,849.1,2.7,138.4,231.9,97.0,0.08,0.091,Normal,N,,Low
+R00116,2026-01-06 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,54.2,955.6,2.3,140.1,212.3,97.0,0.08,0.091,Normal,N,,Low
+R00117,2026-01-06 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,60.9,924.5,2.36,127.9,208.2,97.0,0.08,0.091,Normal,N,,Low
+R00118,2026-01-06 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,63.3,942.7,1.29,128.8,224.5,97.0,0.08,0.091,Normal,N,,Low
+R00119,2026-01-06 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.3,853.4,2.59,115.5,224.6,97.0,0.08,0.091,Normal,N,,Low
+R00120,2026-01-06 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,64.2,893.6,1.41,126.0,201.2,97.0,0.08,0.091,Normal,N,,Low
+R00121,2026-01-06 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,58.2,921.1,1.31,116.0,220.5,97.0,0.08,0.091,Normal,N,,Low
+R00122,2026-01-06 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,54.5,934.3,2.6,123.2,219.9,97.0,0.08,0.091,Normal,N,,Low
+R00123,2026-01-06 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,57.6,845.3,1.63,113.2,221.9,97.0,0.08,0.091,Normal,N,,Low
+R00124,2026-01-06 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.9,915.6,1.15,117.5,230.9,97.0,0.08,0.091,Normal,N,,Low
+R00125,2026-01-07 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,66.6,855.8,2.06,116.7,227.5,97.0,0.08,0.091,Normal,N,,Low
+R00126,2026-01-07 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.0,936.2,1.13,131.1,236.8,97.0,0.08,0.091,Normal,N,,Low
+R00127,2026-01-07 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,61.8,918.7,1.86,139.7,225.2,97.0,0.08,0.091,Normal,N,,Low
+R00128,2026-01-07 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,67.4,856.1,2.11,134.3,214.9,97.0,0.08,0.091,Normal,N,,Low
+R00129,2026-01-07 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,61.9,960.8,2.72,122.1,245.5,97.0,0.08,0.091,Normal,N,,Low
+R00130,2026-01-07 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,56.9,959.1,1.68,130.8,229.4,97.0,0.08,0.091,Normal,N,,Low
+R00131,2026-01-07 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,66.2,960.6,2.18,140.3,229.1,97.0,0.08,0.091,Normal,N,,Low
+R00132,2026-01-07 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,70.9,878.7,1.92,124.5,229.9,97.0,0.08,0.091,Normal,N,,Low
+R00133,2026-01-07 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,71.1,886.0,1.68,131.3,217.8,97.0,0.08,0.091,Normal,N,,Low
+R00134,2026-01-07 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,63.3,968.5,1.91,137.9,239.3,97.0,0.08,0.091,Normal,N,,Low
+R00135,2026-01-07 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,63.9,760.5,2.49,128.1,219.4,92.6,0.383,0.186,Normal,N,,Low
+R00136,2026-01-07 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,64.0,932.8,1.73,131.6,224.9,97.0,0.08,0.091,Normal,N,,Low
+R00137,2026-01-07 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,58.7,935.6,1.68,122.1,225.1,97.0,0.08,0.091,Normal,N,,Low
+R00138,2026-01-07 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,58.6,901.5,2.42,138.3,206.9,97.0,0.08,0.091,Normal,N,,Low
+R00139,2026-01-07 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,66.9,880.8,2.07,135.6,243.0,97.0,0.08,0.091,Normal,N,,Low
+R00140,2026-01-07 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.6,848.7,1.5,112.7,215.5,97.0,0.08,0.091,Normal,N,,Low
+R00141,2026-01-07 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,61.5,841.6,2.82,124.8,239.0,97.0,0.08,0.091,Normal,N,,Low
+R00142,2026-01-07 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,67.5,884.2,1.91,131.7,203.8,97.0,0.08,0.091,Normal,N,,Low
+R00143,2026-01-07 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,58.8,838.0,1.39,118.9,211.0,97.0,0.08,0.091,Normal,N,,Low
+R00144,2026-01-07 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,66.0,858.7,1.97,119.2,223.6,97.0,0.08,0.091,Normal,N,,Low
+R00145,2026-01-07 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,68.0,912.5,2.26,125.6,203.4,97.0,0.08,0.091,Normal,N,,Low
+R00146,2026-01-07 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,63.2,913.6,1.88,125.3,211.2,97.0,0.08,0.091,Normal,N,,Low
+R00147,2026-01-07 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,61.0,923.6,1.22,124.9,210.6,97.0,0.08,0.091,Normal,N,,Low
+R00148,2026-01-07 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,59.1,931.1,2.57,123.9,217.7,97.0,0.08,0.091,Normal,N,,Low
+R00149,2026-01-08 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,59.0,852.6,1.68,121.7,212.2,97.0,0.08,0.091,Normal,N,,Low
+R00150,2026-01-08 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,64.1,942.6,1.92,123.9,249.2,97.0,0.08,0.091,Normal,N,,Low
+R00151,2026-01-08 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,70.2,890.1,2.0,134.6,233.6,97.0,0.08,0.091,Normal,N,,Low
+R00152,2026-01-08 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,63.3,945.6,1.75,132.4,232.4,97.0,0.08,0.091,Normal,N,,Low
+R00153,2026-01-08 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,64.6,891.9,2.16,144.4,245.4,97.0,0.08,0.091,Normal,N,,Low
+R00154,2026-01-08 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,71.4,878.5,1.87,121.9,232.3,97.0,0.08,0.091,Normal,N,,Low
+R00155,2026-01-08 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,66.0,896.8,1.69,138.2,228.9,97.0,0.08,0.091,Normal,N,,Low
+R00156,2026-01-08 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.2,894.6,1.88,145.6,248.7,97.0,0.08,0.091,Normal,N,,Low
+R00157,2026-01-08 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,66.2,917.0,2.51,134.8,234.9,97.0,0.08,0.091,Normal,N,,Low
+R00158,2026-01-08 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.9,956.1,2.13,142.3,209.5,97.0,0.08,0.091,Normal,N,,Low
+R00159,2026-01-08 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,58.4,901.2,2.63,136.0,213.4,97.0,0.08,0.091,Normal,N,,Low
+R00160,2026-01-08 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,60.4,911.2,1.44,125.1,241.8,97.0,0.08,0.091,Normal,N,,Low
+R00161,2026-01-08 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,64.6,919.3,1.47,121.1,218.4,97.0,0.08,0.091,Normal,N,,Low
+R00162,2026-01-08 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,57.5,878.2,2.57,121.7,234.0,97.0,0.08,0.091,Normal,N,,Low
+R00163,2026-01-08 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,68.5,956.1,1.59,132.6,222.5,97.0,0.08,0.091,Normal,N,,Low
+R00164,2026-01-08 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,61.2,897.8,2.18,128.5,210.5,97.0,0.08,0.091,Normal,N,,Low
+R00165,2026-01-08 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,61.1,836.3,2.21,134.1,221.5,97.0,0.08,0.091,Normal,N,,Low
+R00166,2026-01-08 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,58.5,941.9,1.73,119.2,242.4,97.0,0.08,0.091,Normal,N,,Low
+R00167,2026-01-08 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,61.6,916.6,2.53,136.1,236.4,97.0,0.08,0.091,Normal,N,,Low
+R00168,2026-01-08 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,59.1,944.7,2.79,111.1,200.3,97.0,0.08,0.091,Normal,N,,Low
+R00169,2026-01-08 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,56.9,899.4,2.77,125.2,206.5,97.0,0.08,0.091,Normal,N,,Low
+R00170,2026-01-08 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,60.8,853.3,2.43,133.5,237.0,97.0,0.08,0.091,Normal,N,,Low
+R00171,2026-01-08 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,66.4,843.9,1.4,122.2,214.4,97.0,0.08,0.091,Normal,N,,Low
+R00172,2026-01-08 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.6,875.3,1.18,133.1,209.0,97.0,0.08,0.091,Normal,N,,Low
+R00173,2026-01-09 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,61.1,956.4,1.57,139.7,232.7,97.0,0.08,0.091,Normal,N,,Low
+R00174,2026-01-09 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,57.3,940.8,1.77,128.8,236.1,97.0,0.08,0.091,Normal,N,,Low
+R00175,2026-01-09 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,59.9,957.9,1.89,119.2,211.2,97.0,0.08,0.091,Normal,N,,Low
+R00176,2026-01-09 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,64.0,867.5,1.91,123.6,213.7,97.0,0.08,0.091,Normal,N,,Low
+R00177,2026-01-09 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,68.7,917.6,1.33,141.0,230.4,97.0,0.08,0.091,Normal,N,,Low
+R00178,2026-01-09 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,68.2,856.9,1.53,142.4,250.1,97.0,0.08,0.091,Normal,N,,Low
+R00179,2026-01-09 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,63.5,957.3,2.22,145.3,253.5,97.0,0.08,0.091,Normal,N,,Low
+R00180,2026-01-09 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,62.8,939.0,2.2,145.7,236.6,97.0,0.08,0.091,Normal,N,,Low
+R00181,2026-01-09 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,69.0,893.5,2.75,122.8,230.7,96.9,0.086,0.093,Normal,N,,Low
+R00182,2026-01-09 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,66.1,854.9,1.88,125.5,210.8,96.8,0.091,0.095,Normal,N,,Low
+R00183,2026-01-09 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,67.0,879.7,2.28,125.2,249.7,96.6,0.097,0.098,Normal,N,,Low
+R00184,2026-01-09 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,70.7,937.0,1.95,128.1,226.0,96.5,0.102,0.1,Normal,N,,Low
+R00185,2026-01-09 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,70.7,849.6,1.58,141.8,205.2,96.4,0.108,0.102,Normal,N,,Low
+R00186,2026-01-09 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,59.5,922.3,2.07,125.3,200.2,96.3,0.113,0.104,Normal,N,,Low
+R00187,2026-01-09 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.4,942.5,4.59,131.0,208.0,75.3,0.511,0.364,Monitor,N,,Medium
+R00188,2026-01-09 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,61.9,848.9,2.2,130.7,202.4,96.0,0.124,0.108,Normal,N,,Low
+R00189,2026-01-09 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,60.0,946.0,2.31,137.5,228.3,95.9,0.13,0.11,Normal,N,,Low
+R00190,2026-01-09 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,67.7,895.8,2.51,120.4,193.0,95.8,0.136,0.112,Normal,N,,Low
+R00191,2026-01-09 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.1,894.2,2.68,141.8,228.9,95.7,0.141,0.114,Normal,N,,Low
+R00192,2026-01-09 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,59.8,912.4,2.54,126.4,236.2,95.6,0.147,0.116,Normal,N,,Low
+R00193,2026-01-09 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,59.5,894.4,1.53,129.7,228.0,95.4,0.152,0.119,Normal,N,,Low
+R00194,2026-01-09 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,69.7,870.8,2.35,141.3,189.7,95.3,0.158,0.121,Normal,N,,Low
+R00195,2026-01-09 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,66.1,824.3,3.24,142.5,230.9,93.2,0.2,0.147,Normal,N,,Low
+R00196,2026-01-09 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.4,858.9,3.19,142.7,203.5,93.8,0.193,0.141,Normal,N,,Low
+R00197,2026-01-10 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,69.2,900.8,2.65,122.4,224.1,95.0,0.174,0.126,Normal,N,,Low
+R00198,2026-01-10 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,63.9,844.8,2.69,121.5,203.5,94.8,0.18,0.129,Normal,N,,Low
+R00199,2026-01-10 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,75.0,958.4,2.22,126.6,219.4,93.2,0.226,0.152,Normal,N,,Low
+R00200,2026-01-10 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-PMP-102,Feed Pump B,Pump,65.3,885.4,2.1,151.4,222.1,92.2,0.288,0.172,Normal,N,,Low
+R00201,2026-01-06 00:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,79.7,1271.7,3.05,223.5,341.2,97.0,0.08,0.091,Normal,N,,Low
+R00202,2026-01-06 01:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,85.0,1370.4,3.51,215.1,369.8,97.0,0.08,0.091,Normal,N,,Low
+R00203,2026-01-06 02:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,76.6,1354.0,3.38,211.6,342.1,97.0,0.08,0.091,Normal,N,,Low
+R00204,2026-01-06 03:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,75.7,1276.7,2.96,208.1,380.7,97.0,0.08,0.091,Normal,N,,Low
+R00205,2026-01-06 04:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,75.0,1340.3,3.09,187.5,366.8,97.0,0.08,0.091,Normal,N,,Low
+R00206,2026-01-06 05:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,83.7,1330.1,3.56,218.2,330.8,97.0,0.08,0.091,Normal,N,,Low
+R00207,2026-01-06 06:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,86.0,1334.0,2.6,215.3,339.8,97.0,0.08,0.091,Normal,N,,Low
+R00208,2026-01-06 07:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,81.2,1374.3,3.46,198.9,377.4,97.0,0.08,0.091,Normal,N,,Low
+R00209,2026-01-06 08:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,78.6,1340.8,1.93,213.8,345.6,97.0,0.08,0.091,Normal,N,,Low
+R00210,2026-01-06 09:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,86.7,1342.6,2.82,201.9,377.1,97.0,0.08,0.091,Normal,N,,Low
+R00211,2026-01-06 10:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,76.1,1278.9,3.38,200.3,336.4,97.0,0.08,0.091,Normal,N,,Low
+R00212,2026-01-06 11:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,83.9,1308.1,2.75,189.5,365.3,97.0,0.08,0.091,Normal,N,,Low
+R00213,2026-01-06 12:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,87.5,1270.0,1.99,200.6,363.8,97.0,0.08,0.091,Normal,N,,Low
+R00214,2026-01-06 13:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,86.2,1318.1,2.22,196.1,343.4,97.0,0.08,0.091,Normal,N,,Low
+R00215,2026-01-06 14:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,80.3,1280.9,3.53,186.5,336.6,97.0,0.08,0.091,Normal,N,,Low
+R00216,2026-01-06 15:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,84.0,1343.4,2.67,194.3,358.3,97.0,0.08,0.091,Normal,N,,Low
+R00217,2026-01-06 16:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,77.9,1271.5,3.0,188.1,330.3,97.0,0.08,0.091,Normal,N,,Low
+R00218,2026-01-06 17:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,96.6,1326.5,2.86,188.0,377.8,90.1,0.264,0.187,Normal,N,,Low
+R00219,2026-01-06 18:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,77.7,1261.2,3.0,217.2,328.0,97.0,0.08,0.091,Normal,N,,Low
+R00220,2026-01-06 19:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,70.9,1205.6,2.41,205.8,353.9,97.0,0.08,0.091,Normal,N,,Low
+R00221,2026-01-06 20:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,79.8,1332.5,2.93,204.5,379.3,97.0,0.08,0.091,Normal,N,,Low
+R00222,2026-01-06 21:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,79.2,1280.6,3.22,211.2,320.4,97.0,0.08,0.091,Normal,N,,Low
+R00223,2026-01-06 22:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,81.4,1219.2,2.39,216.2,325.5,97.0,0.08,0.091,Normal,N,,Low
+R00224,2026-01-06 23:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,81.6,1209.5,3.14,212.5,375.4,97.0,0.08,0.091,Normal,N,,Low
+R00225,2026-01-07 00:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,79.8,1356.4,1.96,208.6,375.3,97.0,0.08,0.091,Normal,N,,Low
+R00226,2026-01-07 01:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,79.1,1351.8,2.37,205.3,377.6,97.0,0.08,0.091,Normal,N,,Low
+R00227,2026-01-07 02:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,87.5,1215.4,3.23,223.1,354.6,97.0,0.08,0.091,Normal,N,,Low
+R00228,2026-01-07 03:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,80.8,1375.6,2.53,221.1,346.0,97.0,0.08,0.091,Normal,N,,Low
+R00229,2026-01-07 04:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,84.5,1221.7,3.26,201.4,330.1,97.0,0.08,0.091,Normal,N,,Low
+R00230,2026-01-07 05:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,75.2,1305.5,1.93,190.7,371.2,97.0,0.08,0.091,Normal,N,,Low
+R00231,2026-01-07 06:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,76.8,1354.1,2.53,202.5,384.3,97.0,0.08,0.091,Normal,N,,Low
+R00232,2026-01-07 07:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,83.9,1315.0,2.2,194.4,386.9,97.0,0.08,0.091,Normal,N,,Low
+R00233,2026-01-07 08:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,80.3,1369.5,2.23,199.0,375.5,97.0,0.08,0.091,Normal,N,,Low
+R00234,2026-01-07 09:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,83.3,1318.9,2.52,185.0,380.1,97.0,0.08,0.091,Normal,N,,Low
+R00235,2026-01-07 10:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,82.4,1277.7,3.27,192.5,339.4,97.0,0.08,0.091,Normal,N,,Low
+R00236,2026-01-07 11:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,73.8,1205.2,2.37,218.7,356.6,97.0,0.08,0.091,Normal,N,,Low
+R00237,2026-01-07 12:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,79.5,1213.1,1.82,221.5,345.9,97.0,0.08,0.091,Normal,N,,Low
+R00238,2026-01-07 13:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,82.8,1273.1,2.94,186.3,322.7,97.0,0.08,0.091,Normal,N,,Low
+R00239,2026-01-07 14:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,86.9,1251.9,4.72,207.3,343.6,86.9,0.269,0.216,Normal,N,,Low
+R00240,2026-01-07 15:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,72.1,1271.6,2.51,211.6,360.4,97.0,0.08,0.091,Normal,N,,Low
+R00241,2026-01-07 16:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,72.3,1280.4,3.08,181.3,329.5,97.0,0.08,0.091,Normal,N,,Low
+R00242,2026-01-07 17:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,83.3,1334.9,2.15,229.9,344.3,97.0,0.08,0.091,Normal,N,,Low
+R00243,2026-01-07 18:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,73.4,1322.3,2.99,211.3,372.7,97.0,0.08,0.091,Normal,N,,Low
+R00244,2026-01-07 19:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,71.1,1356.2,3.44,211.4,358.2,97.0,0.08,0.091,Normal,N,,Low
+R00245,2026-01-07 20:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,73.7,1243.5,2.81,208.4,328.8,97.0,0.08,0.091,Normal,N,,Low
+R00246,2026-01-07 21:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,71.5,1346.1,3.19,181.2,340.4,97.0,0.08,0.091,Normal,N,,Low
+R00247,2026-01-07 22:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,83.4,1237.8,3.63,212.4,351.2,97.0,0.08,0.091,Normal,N,,Low
+R00248,2026-01-07 23:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,73.7,1200.8,2.94,179.6,367.9,97.0,0.08,0.091,Normal,N,,Low
+R00249,2026-01-08 00:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,83.8,1236.9,2.51,223.8,338.2,97.0,0.08,0.091,Normal,N,,Low
+R00250,2026-01-08 01:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,76.4,1278.7,2.65,207.2,362.9,97.0,0.08,0.091,Normal,N,,Low
+R00251,2026-01-08 02:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,82.0,1323.9,2.44,223.5,376.7,97.0,0.08,0.091,Normal,N,,Low
+R00252,2026-01-08 03:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,80.2,1376.5,3.14,187.4,343.1,97.0,0.08,0.091,Normal,N,,Low
+R00253,2026-01-08 04:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,79.8,1292.3,3.28,219.1,372.1,97.0,0.08,0.091,Normal,N,,Low
+R00254,2026-01-08 05:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,77.9,1241.3,3.58,185.3,377.4,97.0,0.08,0.091,Normal,N,,Low
+R00255,2026-01-08 06:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,89.8,1313.6,2.0,218.2,332.5,97.0,0.08,0.091,Normal,N,,Low
+R00256,2026-01-08 07:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,76.9,1286.5,3.42,211.9,334.5,97.0,0.08,0.091,Normal,N,,Low
+R00257,2026-01-08 08:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,77.0,1353.4,3.49,190.5,331.5,97.0,0.08,0.091,Normal,N,,Low
+R00258,2026-01-08 09:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,80.6,1297.7,2.61,223.1,351.8,97.0,0.08,0.091,Normal,N,,Low
+R00259,2026-01-08 10:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,82.9,1323.0,3.38,185.7,351.0,97.0,0.08,0.091,Normal,N,,Low
+R00260,2026-01-08 11:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,85.1,1382.4,1.87,213.1,372.2,97.0,0.08,0.091,Normal,N,,Low
+R00261,2026-01-08 12:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,81.1,1248.7,2.82,216.5,372.6,97.0,0.08,0.091,Normal,N,,Low
+R00262,2026-01-08 13:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,77.2,1239.4,2.24,202.7,365.7,97.0,0.08,0.091,Normal,N,,Low
+R00263,2026-01-08 14:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,86.1,1370.9,3.56,186.3,336.6,97.0,0.08,0.091,Normal,N,,Low
+R00264,2026-01-08 15:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,76.3,1318.5,2.8,218.9,365.8,97.0,0.08,0.091,Normal,N,,Low
+R00265,2026-01-08 16:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,79.5,1199.4,2.83,198.6,352.4,97.0,0.08,0.091,Normal,N,,Low
+R00266,2026-01-08 17:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,76.2,1328.3,1.95,209.2,320.8,97.0,0.08,0.091,Normal,N,,Low
+R00267,2026-01-08 18:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,76.7,1312.2,2.91,188.6,361.5,97.0,0.08,0.091,Normal,N,,Low
+R00268,2026-01-08 19:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,80.4,1242.6,3.06,204.3,354.9,97.0,0.08,0.091,Normal,N,,Low
+R00269,2026-01-08 20:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,76.0,1244.5,2.02,201.1,364.1,97.0,0.08,0.091,Normal,N,,Low
+R00270,2026-01-08 21:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,73.8,1335.6,2.91,200.0,321.2,97.0,0.08,0.091,Normal,N,,Low
+R00271,2026-01-08 22:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,76.0,1365.2,3.07,194.1,329.7,97.0,0.08,0.091,Normal,N,,Low
+R00272,2026-01-08 23:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,77.0,1327.5,2.58,186.5,375.9,97.0,0.08,0.091,Normal,N,,Low
+R00273,2026-01-09 00:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,75.8,1343.0,1.88,185.1,377.1,96.9,0.086,0.093,Normal,N,,Low
+R00274,2026-01-09 01:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,87.3,1279.0,2.96,183.8,384.1,96.8,0.091,0.095,Normal,N,,Low
+R00275,2026-01-09 02:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,74.8,1300.8,1.96,187.4,362.5,96.6,0.097,0.098,Normal,N,,Low
+R00276,2026-01-09 03:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,76.1,1291.2,2.53,200.7,346.0,96.5,0.102,0.1,Normal,N,,Low
+R00277,2026-01-09 04:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,77.4,1222.7,3.54,218.0,326.5,96.4,0.108,0.102,Normal,N,,Low
+R00278,2026-01-09 05:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,78.9,1282.9,3.87,209.4,385.7,96.3,0.113,0.104,Normal,N,,Low
+R00279,2026-01-09 06:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,82.9,1290.7,3.37,198.7,379.9,96.2,0.119,0.106,Normal,N,,Low
+R00280,2026-01-09 07:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,90.4,1318.4,2.93,192.1,374.9,96.0,0.124,0.108,Normal,N,,Low
+R00281,2026-01-09 08:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,80.3,1273.2,3.25,196.5,361.6,95.9,0.13,0.11,Normal,N,,Low
+R00282,2026-01-09 09:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,90.1,1201.4,2.86,207.8,329.1,95.8,0.136,0.112,Normal,N,,Low
+R00283,2026-01-09 10:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,81.5,1231.7,3.63,219.6,370.4,95.7,0.141,0.114,Normal,N,,Low
+R00284,2026-01-09 11:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,89.4,1231.2,3.64,205.2,363.6,95.6,0.147,0.116,Normal,N,,Low
+R00285,2026-01-09 12:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,80.3,1217.5,3.18,189.6,360.8,95.4,0.152,0.119,Normal,N,,Low
+R00286,2026-01-09 13:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,88.3,1308.3,3.0,215.8,310.4,95.3,0.158,0.121,Normal,N,,Low
+R00287,2026-01-09 14:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,78.4,1291.5,2.81,193.1,351.1,95.2,0.163,0.123,Normal,N,,Low
+R00288,2026-01-09 15:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,80.2,1291.1,2.72,224.4,363.9,95.1,0.169,0.125,Normal,N,,Low
+R00289,2026-01-09 16:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,87.6,1311.1,5.64,210.9,372.6,72.0,0.606,0.411,Monitor,Y,High Vibration,Medium
+R00290,2026-01-09 17:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,84.5,1279.8,4.09,196.2,347.6,93.6,0.204,0.144,Normal,N,,Low
+R00291,2026-01-09 18:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,88.1,1336.5,2.86,218.6,362.6,94.7,0.186,0.131,Normal,N,,Low
+R00292,2026-01-09 19:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,84.7,1246.6,2.79,207.2,360.4,94.6,0.191,0.133,Normal,N,,Low
+R00293,2026-01-09 20:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,77.2,1196.9,3.4,195.8,334.1,94.5,0.197,0.135,Normal,N,,Low
+R00294,2026-01-09 21:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,78.1,1257.1,3.35,203.7,363.6,94.4,0.202,0.137,Normal,N,,Low
+R00295,2026-01-09 22:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,79.2,1223.4,3.48,187.1,371.1,94.2,0.208,0.14,Normal,N,,Low
+R00296,2026-01-09 23:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,90.8,1302.5,4.2,184.0,369.7,91.3,0.266,0.176,Normal,N,,Low
+R00297,2026-01-10 00:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,83.0,1307.7,3.34,189.6,314.5,94.0,0.219,0.143,Normal,N,,Low
+R00298,2026-01-10 01:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,89.0,1251.3,3.42,220.3,367.5,93.9,0.224,0.145,Normal,N,,Low
+R00299,2026-01-10 02:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,90.3,1363.9,3.0,211.7,355.1,93.8,0.23,0.147,Normal,N,,Low
+R00300,2026-01-10 03:00:00,SITE-CLY-02,Foothills Compression Hub,AST-CMP-201,Compressor Train 1,Compressor,85.9,1307.3,4.44,220.6,375.8,87.5,0.351,0.226,Normal,N,,Low
+R00301,2026-01-06 00:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,55.6,611.5,0.92,19.2,101.7,97.0,0.08,0.091,Normal,N,,Low
+R00302,2026-01-06 01:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,48.4,630.2,0.84,18.5,109.6,97.0,0.08,0.091,Normal,N,,Low
+R00303,2026-01-06 02:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,45.3,727.9,1.09,21.3,115.5,97.0,0.08,0.091,Normal,N,,Low
+R00304,2026-01-06 03:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,53.5,713.5,1.28,21.9,116.1,97.0,0.08,0.091,Normal,N,,Low
+R00305,2026-01-06 04:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,50.0,715.3,1.25,22.2,108.5,97.0,0.08,0.091,Normal,N,,Low
+R00306,2026-01-06 05:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,57.8,726.9,0.99,20.4,119.0,97.0,0.08,0.091,Normal,N,,Low
+R00307,2026-01-06 06:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,57.8,710.1,1.32,19.7,106.2,97.0,0.08,0.091,Normal,N,,Low
+R00308,2026-01-06 07:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,48.7,664.3,0.97,20.8,114.8,97.0,0.08,0.091,Normal,N,,Low
+R00309,2026-01-06 08:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,45.1,672.8,1.0,17.1,119.4,97.0,0.08,0.091,Normal,N,,Low
+R00310,2026-01-06 09:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,56.6,717.6,1.01,18.0,127.9,97.0,0.08,0.091,Normal,N,,Low
+R00311,2026-01-06 10:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,56.3,732.1,1.04,16.8,117.2,97.0,0.08,0.091,Normal,N,,Low
+R00312,2026-01-06 11:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,48.2,733.5,0.71,20.2,123.7,97.0,0.08,0.091,Normal,N,,Low
+R00313,2026-01-06 12:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,48.5,639.4,1.08,18.6,104.2,97.0,0.08,0.091,Normal,N,,Low
+R00314,2026-01-06 13:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,42.2,708.4,1.15,15.7,125.9,97.0,0.08,0.091,Normal,N,,Low
+R00315,2026-01-06 14:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,63.9,668.0,1.28,16.9,93.9,94.2,0.156,0.13,Normal,N,,Low
+R00316,2026-01-06 15:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,49.8,677.2,1.41,15.9,119.8,97.0,0.08,0.091,Normal,N,,Low
+R00317,2026-01-06 16:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,48.2,658.9,1.09,12.9,109.4,97.0,0.08,0.091,Normal,N,,Low
+R00318,2026-01-06 17:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,50.8,693.1,0.9,15.4,120.2,97.0,0.08,0.091,Normal,N,,Low
+R00319,2026-01-06 18:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,51.5,615.8,0.98,13.7,110.0,97.0,0.08,0.091,Normal,N,,Low
+R00320,2026-01-06 19:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,44.1,718.5,0.47,14.7,115.0,97.0,0.08,0.091,Normal,N,,Low
+R00321,2026-01-06 20:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,45.3,723.0,0.86,7.7,87.8,97.0,0.08,0.091,Normal,N,,Low
+R00322,2026-01-06 21:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,52.0,711.7,0.78,16.2,109.2,97.0,0.08,0.091,Normal,N,,Low
+R00323,2026-01-06 22:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,46.8,750.8,0.84,11.8,115.6,97.0,0.08,0.091,Normal,N,,Low
+R00324,2026-01-06 23:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,54.6,711.9,1.05,15.5,125.4,97.0,0.08,0.091,Normal,N,,Low
+R00325,2026-01-07 00:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,44.8,638.0,0.81,15.4,96.7,97.0,0.08,0.091,Normal,N,,Low
+R00326,2026-01-07 01:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,46.5,718.9,0.55,13.9,116.1,97.0,0.08,0.091,Normal,N,,Low
+R00327,2026-01-07 02:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,50.9,671.6,0.69,14.6,113.1,97.0,0.08,0.091,Normal,N,,Low
+R00328,2026-01-07 03:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,51.4,650.3,0.75,17.3,118.2,97.0,0.08,0.091,Normal,N,,Low
+R00329,2026-01-07 04:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,57.6,624.0,1.03,20.8,133.3,97.0,0.08,0.091,Normal,N,,Low
+R00330,2026-01-07 05:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,49.7,763.2,0.93,24.4,113.8,97.0,0.08,0.091,Normal,N,,Low
+R00331,2026-01-07 06:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,50.2,754.7,1.14,19.2,114.4,97.0,0.08,0.091,Normal,N,,Low
+R00332,2026-01-07 07:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,45.2,742.1,0.77,20.9,135.3,97.0,0.08,0.091,Normal,N,,Low
+R00333,2026-01-07 08:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,54.7,730.3,0.87,14.6,126.6,97.0,0.08,0.091,Normal,N,,Low
+R00334,2026-01-07 09:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,52.2,657.2,1.01,15.5,116.6,97.0,0.08,0.091,Normal,N,,Low
+R00335,2026-01-07 10:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,53.1,705.3,0.62,15.4,104.7,97.0,0.08,0.091,Normal,N,,Low
+R00336,2026-01-07 11:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,54.7,673.0,0.83,14.0,122.5,97.0,0.08,0.091,Normal,N,,Low
+R00337,2026-01-07 12:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,57.4,711.6,1.04,15.0,111.9,97.0,0.08,0.091,Normal,N,,Low
+R00338,2026-01-07 13:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,43.7,696.0,1.19,16.5,102.9,97.0,0.08,0.091,Normal,N,,Low
+R00339,2026-01-07 14:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,51.4,629.0,1.1,10.9,118.2,97.0,0.08,0.091,Normal,N,,Low
+R00340,2026-01-07 15:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,54.9,669.6,0.65,9.3,105.8,97.0,0.08,0.091,Normal,N,,Low
+R00341,2026-01-07 16:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,42.2,470.0,1.22,11.7,96.9,87.8,0.719,0.289,Normal,Y,Pressure Deviation,Low
+R00342,2026-01-07 17:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,56.1,641.7,1.19,10.9,111.3,97.0,0.08,0.091,Normal,N,,Low
+R00343,2026-01-07 18:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,47.9,713.3,0.71,9.5,112.5,97.0,0.08,0.091,Normal,N,,Low
+R00344,2026-01-07 19:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,42.9,689.2,1.4,12.0,104.7,97.0,0.08,0.091,Normal,N,,Low
+R00345,2026-01-07 20:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,44.5,634.4,1.03,10.1,117.9,97.0,0.08,0.091,Normal,N,,Low
+R00346,2026-01-07 21:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,54.8,678.9,0.69,9.8,121.8,97.0,0.08,0.091,Normal,N,,Low
+R00347,2026-01-07 22:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,53.5,627.1,1.01,10.7,124.2,97.0,0.08,0.091,Normal,N,,Low
+R00348,2026-01-07 23:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,53.8,647.0,0.98,17.4,122.7,97.0,0.08,0.091,Normal,N,,Low
+R00349,2026-01-08 00:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,42.6,625.5,0.91,17.9,112.5,97.0,0.08,0.091,Normal,N,,Low
+R00350,2026-01-08 01:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,48.6,747.0,0.69,14.7,122.8,97.0,0.08,0.091,Normal,N,,Low
+R00351,2026-01-08 02:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,56.0,619.4,0.79,17.7,99.5,97.0,0.08,0.091,Normal,N,,Low
+R00352,2026-01-08 03:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,53.4,717.8,0.69,20.2,118.6,97.0,0.08,0.091,Normal,N,,Low
+R00353,2026-01-08 04:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,49.8,641.2,0.66,21.4,106.2,97.0,0.08,0.091,Normal,N,,Low
+R00354,2026-01-08 05:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,51.9,769.3,1.35,24.2,106.8,97.0,0.08,0.091,Normal,N,,Low
+R00355,2026-01-08 06:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,51.4,502.0,0.72,22.6,114.6,90.4,0.541,0.234,Normal,N,,Low
+R00356,2026-01-08 07:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,52.6,675.7,0.59,23.9,128.7,97.0,0.08,0.091,Normal,N,,Low
+R00357,2026-01-08 08:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,47.1,714.5,1.05,16.8,130.3,97.0,0.08,0.091,Normal,N,,Low
+R00358,2026-01-08 09:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,43.9,720.5,0.95,20.2,130.3,97.0,0.08,0.091,Normal,N,,Low
+R00359,2026-01-08 10:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,55.1,739.2,1.17,16.9,124.3,97.0,0.08,0.091,Normal,N,,Low
+R00360,2026-01-08 11:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,43.9,694.3,0.47,13.1,112.2,97.0,0.08,0.091,Normal,N,,Low
+R00361,2026-01-08 12:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,45.3,671.3,0.74,14.1,112.3,97.0,0.08,0.091,Normal,N,,Low
+R00362,2026-01-08 13:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,57.4,637.1,0.86,15.5,125.8,97.0,0.08,0.091,Normal,N,,Low
+R00363,2026-01-08 14:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,53.5,622.4,0.54,15.4,92.3,97.0,0.08,0.091,Normal,N,,Low
+R00364,2026-01-08 15:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,52.9,691.6,0.54,13.4,117.2,97.0,0.08,0.091,Normal,N,,Low
+R00365,2026-01-08 16:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,50.6,639.3,1.11,16.3,111.3,97.0,0.08,0.091,Normal,N,,Low
+R00366,2026-01-08 17:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,56.4,716.6,0.8,13.3,106.4,97.0,0.08,0.091,Normal,N,,Low
+R00367,2026-01-08 18:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,52.6,700.6,1.07,11.3,90.2,97.0,0.08,0.091,Normal,N,,Low
+R00368,2026-01-08 19:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,46.3,661.2,0.65,15.3,111.5,97.0,0.08,0.091,Normal,N,,Low
+R00369,2026-01-08 20:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,49.9,723.4,1.31,13.5,92.6,97.0,0.08,0.091,Normal,N,,Low
+R00370,2026-01-08 21:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,44.9,720.7,0.89,14.1,97.9,96.9,0.086,0.093,Normal,N,,Low
+R00371,2026-01-08 22:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,47.2,634.0,1.17,13.3,114.0,96.8,0.091,0.095,Normal,N,,Low
+R00372,2026-01-08 23:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,44.9,635.5,0.68,19.2,115.8,96.6,0.097,0.098,Normal,N,,Low
+R00373,2026-01-09 00:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,48.4,622.8,1.26,13.2,124.8,96.5,0.102,0.1,Normal,N,,Low
+R00374,2026-01-09 01:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,47.4,722.1,0.91,15.5,107.7,96.4,0.108,0.102,Normal,N,,Low
+R00375,2026-01-09 02:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,45.8,656.6,1.14,16.4,123.3,96.3,0.113,0.104,Normal,N,,Low
+R00376,2026-01-09 03:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,51.5,722.2,1.1,22.4,120.7,96.2,0.119,0.106,Normal,N,,Low
+R00377,2026-01-09 04:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,58.3,683.9,0.96,25.4,113.5,96.0,0.124,0.108,Normal,N,,Low
+R00378,2026-01-09 05:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,47.5,654.0,0.97,19.1,116.5,95.9,0.13,0.11,Normal,N,,Low
+R00379,2026-01-09 06:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,55.4,695.7,1.03,24.2,107.1,95.8,0.136,0.112,Normal,N,,Low
+R00380,2026-01-09 07:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,60.8,700.3,1.45,21.1,117.2,95.7,0.141,0.114,Normal,N,,Low
+R00381,2026-01-09 08:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,57.5,669.8,1.44,18.2,121.1,95.6,0.147,0.116,Normal,N,,Low
+R00382,2026-01-09 09:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,47.4,688.8,1.0,18.7,105.3,95.4,0.152,0.119,Normal,N,,Low
+R00383,2026-01-09 10:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,46.1,739.2,1.38,24.5,94.3,95.3,0.158,0.121,Normal,N,,Low
+R00384,2026-01-09 11:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,51.4,685.5,1.26,17.6,102.8,95.2,0.163,0.123,Normal,N,,Low
+R00385,2026-01-09 12:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,52.9,672.5,1.29,21.7,113.1,95.1,0.169,0.125,Normal,N,,Low
+R00386,2026-01-09 13:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,55.2,629.8,1.47,20.2,111.1,95.0,0.174,0.126,Normal,N,,Low
+R00387,2026-01-09 14:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,57.2,656.2,1.47,15.9,120.8,94.8,0.18,0.129,Normal,N,,Low
+R00388,2026-01-09 15:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,51.3,628.1,2.02,18.6,109.6,90.2,0.27,0.187,Normal,N,,Low
+R00389,2026-01-09 16:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,57.0,698.5,1.84,19.4,107.8,92.6,0.228,0.158,Normal,N,,Low
+R00390,2026-01-09 17:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,56.3,632.6,1.59,16.7,101.3,94.5,0.197,0.135,Normal,N,,Low
+R00391,2026-01-09 18:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,49.7,630.0,1.43,10.6,92.2,94.4,0.202,0.137,Normal,N,,Low
+R00392,2026-01-09 19:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,59.3,675.2,2.0,22.3,83.7,90.0,0.287,0.192,Normal,N,,Low
+R00393,2026-01-09 20:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,55.6,585.5,1.79,14.5,82.2,92.9,0.237,0.157,Normal,N,,Low
+R00394,2026-01-09 21:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,53.3,608.2,1.69,15.5,90.7,94.0,0.219,0.143,Normal,N,,Low
+R00395,2026-01-09 22:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,56.5,646.2,2.94,22.6,99.6,76.5,0.551,0.361,Monitor,N,,Medium
+R00396,2026-01-09 23:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,48.2,667.0,1.97,22.8,84.1,90.0,0.301,0.194,Normal,N,,Low
+R00397,2026-01-10 00:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,55.6,645.3,2.21,22.3,102.7,86.5,0.37,0.238,Normal,N,,Low
+R00398,2026-01-10 01:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,50.4,637.7,1.9,28.0,103.1,89.3,0.351,0.209,Normal,N,,Low
+R00399,2026-01-10 02:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,52.4,667.1,2.2,25.7,112.7,86.4,0.378,0.24,Normal,N,,Low
+R00400,2026-01-10 03:00:00,SITE-CLY-02,Foothills Compression Hub,AST-VAL-301,Control Valve 3,Valve,52.2,681.7,1.76,21.5,112.3,92.4,0.268,0.167,Normal,N,,Low
+R00401,2026-01-06 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,80.3,375.8,2.42,195.3,0,97.0,0.08,0.091,Normal,N,,Low
+R00402,2026-01-06 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,70.6,359.2,2.91,169.5,0,97.0,0.08,0.091,Normal,N,,Low
+R00403,2026-01-06 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,80.9,378.3,3.04,178.7,0,97.0,0.08,0.091,Normal,N,,Low
+R00404,2026-01-06 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,78.6,378.2,1.74,187.1,0,97.0,0.08,0.091,Normal,N,,Low
+R00405,2026-01-06 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,82.6,393.9,2.16,178.9,0,97.0,0.08,0.091,Normal,N,,Low
+R00406,2026-01-06 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,82.1,342.5,2.51,175.4,0,97.0,0.08,0.091,Normal,N,,Low
+R00407,2026-01-06 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,71.1,353.9,2.73,163.2,0,97.0,0.08,0.091,Normal,N,,Low
+R00408,2026-01-06 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,75.5,329.9,1.81,157.7,0,97.0,0.08,0.091,Normal,N,,Low
+R00409,2026-01-06 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,81.5,332.6,2.58,162.7,0,97.0,0.08,0.091,Normal,N,,Low
+R00410,2026-01-06 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,80.8,326.9,2.35,157.3,0,97.0,0.08,0.091,Normal,N,,Low
+R00411,2026-01-06 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,75.6,342.6,1.69,196.7,0,97.0,0.08,0.091,Normal,N,,Low
+R00412,2026-01-06 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,84.3,323.9,2.93,168.1,0,97.0,0.08,0.091,Normal,N,,Low
+R00413,2026-01-06 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,81.6,314.4,3.08,186.9,0,97.0,0.08,0.091,Normal,N,,Low
+R00414,2026-01-06 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,78.8,343.9,1.98,158.1,0,97.0,0.08,0.091,Normal,N,,Low
+R00415,2026-01-06 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,71.2,363.7,2.72,173.9,0,97.0,0.08,0.091,Normal,N,,Low
+R00416,2026-01-06 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,67.8,321.5,2.6,178.0,0,97.0,0.08,0.091,Normal,N,,Low
+R00417,2026-01-06 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,72.9,365.5,2.99,185.1,0,97.0,0.08,0.091,Normal,N,,Low
+R00418,2026-01-06 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,70.1,379.4,2.4,171.3,0,97.0,0.08,0.091,Normal,N,,Low
+R00419,2026-01-06 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,74.2,375.9,2.18,161.4,0,97.0,0.08,0.091,Normal,N,,Low
+R00420,2026-01-06 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,68.9,324.4,2.31,167.5,0,97.0,0.08,0.091,Normal,N,,Low
+R00421,2026-01-06 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,75.8,367.2,1.82,160.4,0,97.0,0.08,0.091,Normal,N,,Low
+R00422,2026-01-06 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,80.8,308.7,3.29,176.1,0,97.0,0.08,0.091,Normal,N,,Low
+R00423,2026-01-06 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,71.2,379.1,2.22,158.0,0,97.0,0.08,0.091,Normal,N,,Low
+R00424,2026-01-06 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,76.0,376.1,2.78,154.5,0,97.0,0.08,0.091,Normal,N,,Low
+R00425,2026-01-07 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,83.6,384.6,2.11,192.7,0,97.0,0.08,0.091,Normal,N,,Low
+R00426,2026-01-07 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,73.8,372.2,3.05,169.5,0,97.0,0.08,0.091,Normal,N,,Low
+R00427,2026-01-07 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,84.2,390.0,2.87,160.8,0,97.0,0.08,0.091,Normal,N,,Low
+R00428,2026-01-07 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,78.8,362.7,2.14,186.3,0,97.0,0.08,0.091,Normal,N,,Low
+R00429,2026-01-07 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,83.1,370.5,2.36,184.8,0,97.0,0.08,0.091,Normal,N,,Low
+R00430,2026-01-07 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,69.7,357.9,3.44,158.5,0,97.0,0.08,0.091,Normal,N,,Low
+R00431,2026-01-07 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,86.3,360.4,2.42,170.4,0,97.0,0.08,0.091,Normal,N,,Low
+R00432,2026-01-07 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,81.4,348.7,2.99,179.0,0,97.0,0.08,0.091,Normal,N,,Low
+R00433,2026-01-07 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,82.3,360.2,1.97,176.4,0,97.0,0.08,0.091,Normal,N,,Low
+R00434,2026-01-07 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,81.2,361.4,1.75,170.2,0,97.0,0.08,0.091,Normal,N,,Low
+R00435,2026-01-07 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,82.2,350.9,1.78,159.1,0,97.0,0.08,0.091,Normal,N,,Low
+R00436,2026-01-07 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,75.8,323.1,3.16,157.0,0,97.0,0.08,0.091,Normal,N,,Low
+R00437,2026-01-07 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,75.2,357.2,1.92,161.3,0,97.0,0.08,0.091,Normal,N,,Low
+R00438,2026-01-07 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,81.9,365.1,1.82,165.3,0,97.0,0.08,0.091,Normal,N,,Low
+R00439,2026-01-07 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,72.9,342.2,3.96,181.7,0,93.4,0.148,0.136,Normal,N,,Low
+R00440,2026-01-07 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,68.6,306.3,3.01,161.1,0,97.0,0.08,0.091,Normal,N,,Low
+R00441,2026-01-07 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,80.0,296.7,1.77,186.0,0,97.0,0.08,0.091,Normal,N,,Low
+R00442,2026-01-07 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,75.6,334.3,2.64,170.3,0,97.0,0.08,0.091,Normal,N,,Low
+R00443,2026-01-07 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,74.4,304.4,2.66,183.8,0,97.0,0.08,0.091,Normal,N,,Low
+R00444,2026-01-07 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,79.9,375.4,2.33,176.0,0,97.0,0.08,0.091,Normal,N,,Low
+R00445,2026-01-07 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,77.3,364.5,2.5,189.9,0,97.0,0.08,0.091,Normal,N,,Low
+R00446,2026-01-07 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,71.6,334.2,2.42,161.4,0,97.0,0.08,0.091,Normal,N,,Low
+R00447,2026-01-07 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,78.4,345.5,2.82,152.5,0,97.0,0.08,0.091,Normal,N,,Low
+R00448,2026-01-07 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,77.3,344.8,3.18,161.8,0,97.0,0.08,0.091,Normal,N,,Low
+R00449,2026-01-08 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,73.1,389.6,1.81,173.4,0,97.0,0.08,0.091,Normal,N,,Low
+R00450,2026-01-08 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,76.2,362.7,3.17,152.2,0,97.0,0.08,0.091,Normal,N,,Low
+R00451,2026-01-08 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,71.2,383.0,2.32,177.5,0,97.0,0.08,0.091,Normal,N,,Low
+R00452,2026-01-08 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,69.1,343.8,2.22,166.0,0,97.0,0.08,0.091,Normal,N,,Low
+R00453,2026-01-08 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,80.4,380.2,1.7,167.8,0,97.0,0.08,0.091,Normal,N,,Low
+R00454,2026-01-08 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,81.3,387.7,2.58,194.1,0,97.0,0.08,0.091,Normal,N,,Low
+R00455,2026-01-08 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,75.8,358.5,3.04,185.9,0,97.0,0.08,0.091,Normal,N,,Low
+R00456,2026-01-08 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,77.9,380.3,3.14,196.6,0,97.0,0.08,0.091,Normal,N,,Low
+R00457,2026-01-08 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,70.9,374.3,2.63,181.5,0,97.0,0.08,0.091,Normal,N,,Low
+R00458,2026-01-08 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,81.6,341.0,2.39,163.4,0,97.0,0.08,0.091,Normal,N,,Low
+R00459,2026-01-08 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,83.9,338.7,2.99,193.0,0,97.0,0.08,0.091,Normal,N,,Low
+R00460,2026-01-08 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,68.9,352.6,3.14,174.9,0,97.0,0.08,0.091,Normal,N,,Low
+R00461,2026-01-08 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,70.3,375.8,2.68,182.6,0,97.0,0.08,0.091,Normal,N,,Low
+R00462,2026-01-08 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,78.9,305.8,2.75,152.9,0,97.0,0.08,0.091,Normal,N,,Low
+R00463,2026-01-08 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,67.8,357.2,2.58,188.5,0,97.0,0.08,0.091,Normal,N,,Low
+R00464,2026-01-08 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,70.0,326.8,1.83,160.9,0,97.0,0.08,0.091,Normal,N,,Low
+R00465,2026-01-08 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,76.3,316.6,2.15,179.0,0,97.0,0.08,0.091,Normal,N,,Low
+R00466,2026-01-08 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,70.8,348.1,2.35,166.6,0,97.0,0.08,0.091,Normal,N,,Low
+R00467,2026-01-08 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,75.7,360.8,2.72,182.2,0,96.9,0.086,0.093,Normal,N,,Low
+R00468,2026-01-08 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,74.6,356.1,2.54,176.4,0,96.8,0.091,0.095,Normal,N,,Low
+R00469,2026-01-08 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,75.9,325.9,2.98,186.9,0,96.6,0.097,0.098,Normal,N,,Low
+R00470,2026-01-08 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,69.8,348.7,2.11,184.3,0,96.5,0.102,0.1,Normal,N,,Low
+R00471,2026-01-08 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,74.6,340.5,2.4,185.7,0,96.4,0.108,0.102,Normal,N,,Low
+R00472,2026-01-08 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,72.3,304.3,2.78,176.5,0,96.3,0.113,0.104,Normal,N,,Low
+R00473,2026-01-09 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,70.6,368.3,2.47,181.6,0,96.2,0.119,0.106,Normal,N,,Low
+R00474,2026-01-09 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,69.5,319.9,2.51,162.2,0,96.0,0.124,0.108,Normal,N,,Low
+R00475,2026-01-09 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,85.1,386.2,1.94,197.8,0,95.9,0.13,0.11,Normal,N,,Low
+R00476,2026-01-09 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,72.0,376.3,3.42,165.8,0,95.8,0.136,0.112,Normal,N,,Low
+R00477,2026-01-09 04:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,81.1,351.2,2.84,191.6,0,95.7,0.141,0.114,Normal,N,,Low
+R00478,2026-01-09 05:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,72.5,351.4,3.63,185.1,0,95.6,0.147,0.116,Normal,N,,Low
+R00479,2026-01-09 06:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,75.5,356.5,2.5,184.1,0,95.4,0.152,0.119,Normal,N,,Low
+R00480,2026-01-09 07:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,80.2,383.7,3.23,180.2,0,95.3,0.158,0.121,Normal,N,,Low
+R00481,2026-01-09 08:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,83.9,320.4,2.34,192.2,0,95.2,0.163,0.123,Normal,N,,Low
+R00482,2026-01-09 09:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,73.6,373.9,3.09,188.2,0,95.1,0.169,0.125,Normal,N,,Low
+R00483,2026-01-09 10:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,87.8,363.5,2.38,162.5,0,95.0,0.174,0.126,Normal,N,,Low
+R00484,2026-01-09 11:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,72.1,370.9,2.18,193.0,0,94.8,0.18,0.129,Normal,N,,Low
+R00485,2026-01-09 12:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,77.5,320.2,2.72,194.0,0,94.7,0.186,0.131,Normal,N,,Low
+R00486,2026-01-09 13:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,78.3,358.4,2.98,163.1,0,94.6,0.191,0.133,Normal,N,,Low
+R00487,2026-01-09 14:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,73.4,317.2,3.28,170.2,0,94.5,0.197,0.135,Normal,N,,Low
+R00488,2026-01-09 15:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,86.5,326.2,3.26,194.1,0,94.4,0.202,0.137,Normal,N,,Low
+R00489,2026-01-09 16:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,76.3,281.8,2.9,183.4,0,94.0,0.226,0.145,Normal,N,,Low
+R00490,2026-01-09 17:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,72.3,337.3,2.17,154.6,0,94.1,0.213,0.141,Normal,N,,Low
+R00491,2026-01-09 18:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,72.1,316.2,3.78,185.1,0,92.9,0.24,0.157,Normal,N,,Low
+R00492,2026-01-09 19:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,80.1,336.0,2.72,192.6,0,93.9,0.224,0.145,Normal,N,,Low
+R00493,2026-01-09 20:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,85.0,292.4,3.53,168.2,0,93.8,0.23,0.147,Normal,N,,Low
+R00494,2026-01-09 21:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,87.5,301.4,2.94,160.3,0,93.6,0.236,0.15,Normal,N,,Low
+R00495,2026-01-09 22:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,80.6,310.5,2.89,197.5,0,93.5,0.241,0.152,Normal,N,,Low
+R00496,2026-01-09 23:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,79.0,320.8,4.19,191.9,0,86.5,0.376,0.239,Normal,N,,Low
+R00497,2026-01-10 00:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,82.5,313.2,3.45,197.1,0,93.3,0.252,0.156,Normal,N,,Low
+R00498,2026-01-10 01:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,86.8,295.2,2.98,186.9,0,93.2,0.258,0.158,Normal,N,,Low
+R00499,2026-01-10 02:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,85.3,306.2,3.56,163.4,0,93.0,0.263,0.16,Normal,N,,Low
+R00500,2026-01-10 03:00:00,SITE-CLY-01,Calgary North Pump Station,AST-GEN-401,Backup Generator 1,Generator,90.4,306.8,2.78,198.6,0,89.3,0.365,0.212,Normal,N,,Low

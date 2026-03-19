@@ -27,12 +27,17 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+    line-height: 1.5;
     font-family: var(--font-body);
     color: var(--text);
     background:
         radial-gradient(circle at top left, rgba(142, 202, 230, 0.14), transparent 32%),
         radial-gradient(circle at bottom right, rgba(244, 162, 97, 0.12), transparent 28%),
         linear-gradient(135deg, #02090d 0%, #08141c 42%, #091a22 100%);
+}
+
+p {
+    margin: 0;
 }
 
 button,
@@ -46,6 +51,7 @@ textarea {
     display: grid;
     grid-template-columns: 320px 1fr;
     min-height: 100vh;
+    align-items: start;
 }
 
 .sidebar {
@@ -116,6 +122,7 @@ textarea {
     border-radius: 999px;
     font-size: 0.82rem;
     background: rgba(255, 255, 255, 0.05);
+    white-space: nowrap;
 }
 
 .nav {
@@ -158,25 +165,28 @@ textarea {
 }
 
 .content {
-    padding: 2rem;
+    display: grid;
+    align-content: start;
+    gap: 1.6rem;
+    min-width: 0;
+    padding: 2.25rem clamp(1.25rem, 2vw, 2.5rem);
 }
 
 .topbar {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 1.6rem;
+    gap: 1.2rem;
 }
 
 .topbar-meta {
     display: flex;
-    gap: 0.8rem;
+    gap: 0.9rem;
     flex-wrap: wrap;
 }
 
 .meta-chip {
-    min-width: 170px;
+    min-width: 190px;
     padding: 0.85rem 1rem;
     border-radius: var(--radius-sm);
     background: rgba(255, 255, 255, 0.04);
@@ -185,7 +195,8 @@ textarea {
 
 .panel-section {
     display: none;
-    gap: 1.2rem;
+    gap: 1.45rem;
+    min-width: 0;
 }
 
 .panel-section.active {
@@ -194,12 +205,16 @@ textarea {
 
 .metric-grid {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1.15rem;
 }
 
 .metric-card {
-    padding: 1rem;
+    display: grid;
+    align-content: start;
+    gap: 0.3rem;
+    min-height: 148px;
+    padding: 1.15rem;
     border-radius: var(--radius-sm);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -227,20 +242,26 @@ textarea {
 .dashboard-grid,
 .two-column-layout {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 1.2rem;
+    align-items: start;
 }
 
 .panel {
-    padding: 1.2rem;
+    display: grid;
+    align-content: start;
+    gap: 1rem;
+    min-width: 0;
+    padding: 1.35rem;
 }
 
 .panel-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.15rem;
 }
 
 .stack-list,
@@ -248,13 +269,14 @@ textarea {
 .detail-body,
 .table-wrap {
     display: grid;
-    gap: 0.75rem;
+    gap: 0.9rem;
+    min-width: 0;
 }
 
 .risk-card,
 .mini-row,
 .detail-card {
-    padding: 0.9rem 1rem;
+    padding: 1rem 1.1rem;
     border-radius: var(--radius-sm);
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.05);
@@ -265,7 +287,8 @@ textarea {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    align-items: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .risk-bar {
@@ -285,19 +308,23 @@ textarea {
 
 .table-wrap {
     overflow: auto;
+    padding-bottom: 0.2rem;
+    scrollbar-color: rgba(142, 202, 230, 0.3) transparent;
 }
 
 table {
     width: 100%;
+    min-width: 700px;
     border-collapse: collapse;
 }
 
 th,
 td {
-    padding: 0.85rem 0.75rem;
+    padding: 1rem 0.85rem;
     text-align: left;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     vertical-align: top;
+    line-height: 1.45;
 }
 
 th {
@@ -339,14 +366,15 @@ tbody tr:hover {
 
 .form-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.9rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem 1.1rem;
+    align-items: start;
 }
 
 .form-grid label,
 .login-form label {
     display: grid;
-    gap: 0.45rem;
+    gap: 0.5rem;
 }
 
 .form-grid label span,
@@ -360,6 +388,7 @@ tbody tr:hover {
 .form-grid textarea,
 .login-form input {
     width: 100%;
+    min-height: 48px;
     padding: 0.82rem 0.9rem;
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -368,7 +397,14 @@ tbody tr:hover {
 }
 
 .form-grid textarea {
+    min-height: 120px;
     resize: vertical;
+}
+
+.form-grid > .primary-button {
+    grid-column: 1 / -1;
+    justify-self: start;
+    min-width: 200px;
 }
 
 .span-2 {
@@ -378,12 +414,13 @@ tbody tr:hover {
 .detail-body.empty-state {
     min-height: 180px;
     place-items: center;
+    text-align: center;
     color: var(--muted);
 }
 
 .double-stack {
     display: grid;
-    gap: 0.55rem;
+    gap: 0.8rem;
 }
 
 .login-overlay {
@@ -402,7 +439,7 @@ tbody tr:hover {
 }
 
 .login-card {
-    width: min(540px, 100%);
+    width: min(640px, 100%);
     padding: 2rem;
 }
 
@@ -411,6 +448,10 @@ tbody tr:hover {
     display: grid;
     gap: 1rem;
     margin-top: 1rem;
+}
+
+.demo-users {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
 .demo-user {
@@ -473,10 +514,6 @@ tbody tr:hover {
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .metric-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .dashboard-grid,
     .two-column-layout {
         grid-template-columns: 1fr;
@@ -492,7 +529,6 @@ tbody tr:hover {
         padding: 1.1rem;
     }
 
-    .metric-grid,
     .form-grid {
         grid-template-columns: 1fr;
     }
@@ -501,7 +537,20 @@ tbody tr:hover {
         grid-column: auto;
     }
 
+    .form-grid > .primary-button {
+        width: 100%;
+    }
+
     .topbar {
         flex-direction: column;
+    }
+
+    .meta-chip {
+        min-width: 0;
+        width: 100%;
+    }
+
+    table {
+        min-width: 620px;
     }
 }

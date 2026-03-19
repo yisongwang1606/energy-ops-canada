@@ -1,5 +1,12 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
+try:
+    from fastapi import FastAPI
+    from pydantic import BaseModel
+except ModuleNotFoundError as exc:
+    raise SystemExit(
+        "Missing Python dependencies for the ML service. "
+        "Run `py -m venv .venv` and `.venv\\Scripts\\pip install -r requirements.txt` "
+        "inside `ml-service` first."
+    ) from exc
 
 
 app = FastAPI(title="Energy Ops ML Service", version="0.1.0")
@@ -138,3 +145,15 @@ def failure_risk(payload: PredictionRequest) -> dict:
         "recommendedAction": result["recommendedAction"],
         "message": result["message"],
     }
+
+
+if __name__ == "__main__":
+    try:
+        import uvicorn
+    except ModuleNotFoundError as exc:
+        raise SystemExit(
+            "Uvicorn is not installed. Run `.venv\\Scripts\\pip install -r requirements.txt` "
+            "inside `ml-service` first."
+        ) from exc
+
+    uvicorn.run("app:app", host="0.0.0.0", port=8001, reload=False)

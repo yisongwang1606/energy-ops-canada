@@ -235,9 +235,7 @@ Telemetry fields currently tracked:
 
 Scoring behaviour:
 
-- The Java service always has a local fallback rule engine.
-- The Python sidecar can override health and failure scoring when enabled.
-- Imported CSV rows can carry simulated risk values while still falling back to the local model when needed.
+The ML component in this project is currently best described as a predictive scoring service rather than a fully trained production model. It looks at telemetry such as temperature, pressure, vibration, current, and flow rate, then returns health, anomaly, and failure-risk scores that drive alerts and work orders. I split it into a separate Python sidecar so the architecture already matches a production pattern where the core platform and the scoring service can evolve independently. If that sidecar is unavailable, the Java backend falls back to a local rules engine so the operational workflow still works safely. The next step is to replace more of the rules-based logic with a trained and versioned model without changing the application contract.
 
 ## Verification
 

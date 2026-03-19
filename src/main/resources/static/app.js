@@ -18,6 +18,50 @@ const toast = document.querySelector("#toast");
 const pageTitle = document.querySelector("#page-title");
 const sessionName = document.querySelector("#session-name");
 const sessionRole = document.querySelector("#session-role");
+const readingForm = document.querySelector("#reading-form");
+const workOrderForm = document.querySelector("#workorder-form");
+const maintenanceForm = document.querySelector("#maintenance-form");
+
+function getFormField(form, name) {
+    return form?.elements.namedItem(name);
+}
+
+function fieldValue(form, name) {
+    return getFormField(form, name)?.value ?? "";
+}
+
+function setSelectOptions(select, optionsHtml, defaultOptionHtml, emptyLabel) {
+    if (!select) {
+        return;
+    }
+    const currentValue = select.value;
+    const hasDynamicOptions = Boolean(optionsHtml);
+    select.innerHTML = hasDynamicOptions
+        ? `${defaultOptionHtml}${optionsHtml}`
+        : `<option value="">${emptyLabel}</option>`;
+    select.disabled = !hasDynamicOptions;
+
+    if (hasDynamicOptions && Array.from(select.options).some((option) => option.value === currentValue)) {
+        select.value = currentValue;
+    } else {
+        select.selectedIndex = 0;
+    }
+}
+
+function hasOption(select, value) {
+    if (!select || value === null || value === undefined || value === "") {
+        return false;
+    }
+    return Array.from(select.options).some((option) => option.value === String(value));
+}
+
+function selectOptionValue(select, value) {
+    if (hasOption(select, value)) {
+        select.value = String(value);
+        return true;
+    }
+    return false;
+}
 
 const formatDateTime = (value) => {
     if (!value) return "Not available";
@@ -35,6 +79,16 @@ const formatDate = (value) => {
 
 const formatNumber = (value, digits = 1) =>
     new Intl.NumberFormat("en-CA", { maximumFractionDigits: digits, minimumFractionDigits: digits }).format(value ?? 0);
+
+const joinMeta = (...parts) =>
+    parts
+        .filter((part) => part !== null && part !== undefined && String(part).trim() !== "")
+        .join(" / ");
+
+const shortTrendLabel = (label) => {
+    const parts = String(label).split(" ");
+    return parts.length >= 2 ? parts.slice(-2).join(" ") : label;
+};
 
 const statusPill = (value) => `<span class="status-pill ${String(value).toLowerCase()}">${value}</span>`;
 
@@ -58,12 +112,14 @@ async function apiFetch(path, options = {}) {
     const response = await fetch(path, { ...options, headers });
     if (!response.ok) {
         let message = `Request failed with status ${response.status}`;
-        try {
-            const body = await response.json();
-            message = body.message || message;
-        } catch (error) {
-            const text = await response.text();
-            if (text) message = text;
+        const responseText = await response.text();
+        if (responseText) {
+            try {
+                const body = JSON.parse(responseText);
+                message = body.message || message;
+            } catch (error) {
+                message = responseText;
+            }
         }
         throw new Error(message);
     }
@@ -79,7 +135,7 @@ async function apiFetch(path, options = {}) {
 
 function applySession() {
     sessionName.textContent = state.user ? state.user.fullName : "Not signed in";
-    sessionRole.textContent = state.user ? `${state.user.role} • ${state.user.homeProvince}` : "Awaiting login";
+    sessionRole.textContent = state.user ? joinMeta(state.user.role, state.user.homeProvince) : "Awaiting login";
 }
 
 async function login(username, password) {
@@ -91,14 +147,27 @@ async function login(username, password) {
     state.user = auth.user;
     localStorage.setItem("energyOpsToken", state.token);
     applySession();
-    loginOverlay.classList.add("hidden");
-    await refreshData();
+    try {
+        await refreshData();
+        loginOverlay.classList.add("hidden");
+    } catch (error) {
+        clearSession();
+        throw error;
+    }
     showToast(`Welcome back, ${auth.user.fullName}.`);
 }
 
 function clearSession() {
     state.token = "";
     state.user = null;
+    state.dashboard = null;
+    state.sites = [];
+    state.assets = [];
+    state.alerts = [];
+    state.workOrders = [];
+    state.maintenance = [];
+    state.auditLogs = [];
+    state.selectedAssetId = null;
     localStorage.removeItem("energyOpsToken");
     applySession();
     loginOverlay.classList.remove("hidden");
@@ -113,8 +182,8 @@ async function restoreSession() {
     try {
         state.user = await apiFetch("/api/auth/me");
         applySession();
-        loginOverlay.classList.add("hidden");
         await refreshData();
+        loginOverlay.classList.add("hidden");
     } catch (error) {
         clearSession();
     }
@@ -138,6 +207,10 @@ async function refreshData() {
     state.workOrders = workOrders;
     state.maintenance = maintenance;
     state.auditLogs = auditLogs;
+
+    if (state.selectedAssetId && !assets.some((asset) => asset.id === state.selectedAssetId)) {
+        state.selectedAssetId = null;
+    }
 
     if (!state.selectedAssetId && assets.length) {
         state.selectedAssetId = assets[0].id;
@@ -180,7 +253,7 @@ function renderSiteRisk() {
             <div class="risk-card-header">
                 <div>
                     <strong>${site.siteName}</strong>
-                    <p class="muted">${site.province} • ${site.siteId}</p>
+                    <p class="muted">${joinMeta(site.province, site.siteId)}</p>
                 </div>
                 ${statusPill(`${site.openAlerts} open alerts`)}
             </div>
@@ -224,7 +297,7 @@ function renderRecentQueues() {
                 <strong>${alert.alertCode}</strong>
                 ${statusPill(alert.priority)}
             </div>
-            <p>${alert.assetName} • ${alert.alertType}</p>
+            <p>${joinMeta(alert.assetName, alert.alertType)}</p>
             <p class="muted">${formatDateTime(alert.createdAt)}</p>
         </div>
     `).join("");
@@ -236,7 +309,7 @@ function renderRecentQueues() {
                 ${statusPill(workOrder.status)}
             </div>
             <p>${workOrder.title}</p>
-            <p class="muted">${workOrder.assignedTo || "Unassigned"} • Due ${formatDate(workOrder.dueDate)}</p>
+            <p class="muted">${joinMeta(workOrder.assignedTo || "Unassigned", `Due ${formatDate(workOrder.dueDate)}`)}</p>
         </div>
     `).join("");
 }
@@ -261,7 +334,7 @@ function renderAssets() {
         ["Asset", "Site", "Health", "Risk", "Latest Reading"],
         state.assets.map((asset) => `
             <tr>
-                <td><button class="table-action-button" type="button" data-asset-select="${asset.id}">${asset.name}</button><br><span class="muted">${asset.assetType} • ${asset.id}</span></td>
+                <td><button class="table-action-button" type="button" data-asset-select="${asset.id}">${asset.name}</button><br><span class="muted">${joinMeta(asset.assetType, asset.id)}</span></td>
                 <td>${asset.siteName}</td>
                 <td>${formatNumber(asset.latestHealthScore)}</td>
                 <td>${formatNumber(asset.latestFailureRisk * 100)}%</td>
@@ -274,18 +347,18 @@ function renderAssets() {
 async function loadAssetDetail(assetId) {
     state.selectedAssetId = assetId;
     const detail = await apiFetch(`/api/assets/${assetId}`);
-    document.querySelector("#asset-detail-title").textContent = `${detail.asset.name} • ${detail.asset.assetType}`;
+    document.querySelector("#asset-detail-title").textContent = joinMeta(detail.asset.name, detail.asset.assetType);
     document.querySelector("#asset-detail-body").classList.remove("empty-state");
     document.querySelector("#asset-detail-body").innerHTML = `
         <div class="detail-card">
             <div class="row-between">
                 <div>
                     <strong>${detail.asset.siteName}</strong>
-                    <p class="muted">${detail.asset.id} • ${detail.asset.status}</p>
+                    <p class="muted">${joinMeta(detail.asset.id, detail.asset.status)}</p>
                 </div>
                 ${statusPill(`${formatNumber(detail.asset.latestFailureRisk * 100)}% risk`)}
             </div>
-            <p class="muted">Health ${formatNumber(detail.asset.latestHealthScore)} • Last reading ${formatDateTime(detail.asset.latestReadingAt)}</p>
+            <p class="muted">${joinMeta(`Health ${formatNumber(detail.asset.latestHealthScore)}`, `Last reading ${formatDateTime(detail.asset.latestReadingAt)}`)}</p>
         </div>
         <div class="detail-card">
             <p class="label">Recent Telemetry</p>
@@ -304,7 +377,11 @@ async function loadAssetDetail(assetId) {
         </div>
         <div class="detail-card">
             <p class="label">Active Alerts</p>
-            ${detail.activeAlerts.length ? detail.activeAlerts.map((alert) => `<p>${alert.alertCode} • ${alert.alertType} • ${alert.status}</p>`).join("") : "<p class='muted'>No active alerts.</p>"}
+            ${detail.activeAlerts.length ? detail.activeAlerts.map((alert) => `<p>${joinMeta(alert.alertCode, alert.alertType, alert.status)}</p>`).join("") : "<p class='muted'>No active alerts.</p>"}
+        </div>
+        <div class="detail-card">
+            <p class="label">Linked Work Orders</p>
+            ${detail.workOrders.length ? detail.workOrders.slice(0, 6).map((workOrder) => `<p>${joinMeta(workOrder.workOrderCode, workOrder.title, workOrder.status)}</p>`).join("") : "<p class='muted'>No work orders created for this asset.</p>"}
         </div>
     `;
 }
@@ -384,28 +461,60 @@ function renderAudit() {
 }
 
 function populateFormOptions() {
-    const assetOptions = state.assets.map((asset) => `<option value="${asset.id}">${asset.name} (${asset.id})</option>`).join("");
-    const siteOptions = state.sites.map((site) => `<option value="${site.id}">${site.name}</option>`).join("");
+    const assetOptions = state.assets
+        .map((asset) => `<option value="${asset.id}">${asset.name} (${joinMeta(asset.siteName, asset.id)})</option>`)
+        .join("");
+    const siteOptions = state.sites.map((site) => `<option value="${site.id}">${site.name} (${site.province})</option>`).join("");
     const alertOptions = state.alerts
         .filter((alert) => alert.status !== "RESOLVED")
-        .map((alert) => `<option value="${alert.id}">${alert.alertCode} • ${alert.assetName} • ${alert.alertType}</option>`)
+        .map((alert) => `<option value="${alert.id}">${joinMeta(alert.alertCode, alert.assetName, alert.alertType, alert.priority)}</option>`)
         .join("");
-    const workOrderOptions = state.workOrders.map((workOrder) => `<option value="${workOrder.id}">${workOrder.workOrderCode} • ${workOrder.title}</option>`).join("");
+    const maintenanceEligibleWorkOrders = state.workOrders.filter((workOrder) =>
+        !state.maintenance.some((record) => record.workOrderId === workOrder.id)
+    );
+    const workOrderOptions = maintenanceEligibleWorkOrders
+        .map((workOrder) => `<option value="${workOrder.id}">${joinMeta(workOrder.workOrderCode, workOrder.assetName, workOrder.status)}</option>`)
+        .join("");
 
-    const readingForm = document.querySelector("#reading-form");
-    readingForm.assetId.innerHTML = assetOptions;
-    readingForm.siteId.innerHTML = siteOptions;
+    const readingAssetSelect = getFormField(readingForm, "assetId");
+    const readingSiteSelect = getFormField(readingForm, "siteId");
+    const workOrderAlertSelect = getFormField(workOrderForm, "alertId");
+    const workOrderAssetSelect = getFormField(workOrderForm, "assetId");
+    const maintenanceWorkOrderSelect = getFormField(maintenanceForm, "workOrderId");
+
+    setSelectOptions(readingAssetSelect, assetOptions, "", "No assets available");
+    setSelectOptions(readingSiteSelect, siteOptions, "", "No sites available");
+    if (!fieldValue(readingForm, "assetId")) {
+        selectOptionValue(readingAssetSelect, state.selectedAssetId || state.assets[0]?.id);
+    }
     syncReadingSite();
-    if (!readingForm.timestamp.value) {
+    if (!fieldValue(readingForm, "timestamp")) {
         const now = new Date();
         now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-        readingForm.timestamp.value = now.toISOString().slice(0, 16);
+        getFormField(readingForm, "timestamp").value = now.toISOString().slice(0, 16);
     }
 
-    const workOrderForm = document.querySelector("#workorder-form");
-    workOrderForm.alertId.innerHTML = `<option value="">No linked alert</option>${alertOptions}`;
-    workOrderForm.assetId.innerHTML = `<option value="">Use alert asset</option>${assetOptions}`;
-    document.querySelector("#maintenance-form").workOrderId.innerHTML = workOrderOptions;
+    setSelectOptions(
+        workOrderAlertSelect,
+        alertOptions,
+        `<option value="">No linked alert</option>`,
+        "No open alerts available"
+    );
+    setSelectOptions(
+        workOrderAssetSelect,
+        assetOptions,
+        `<option value="">Use alert asset</option>`,
+        "No assets available"
+    );
+    if (!fieldValue(workOrderForm, "assetId")) {
+        selectOptionValue(workOrderAssetSelect, state.selectedAssetId || state.assets[0]?.id);
+    }
+    syncWorkOrderSource();
+
+    setSelectOptions(maintenanceWorkOrderSelect, workOrderOptions, "", "No work orders awaiting closeout");
+    if (!fieldValue(maintenanceForm, "workOrderId")) {
+        selectOptionValue(maintenanceWorkOrderSelect, maintenanceEligibleWorkOrders[0]?.id);
+    }
 }
 
 function renderTrend() {
@@ -436,7 +545,7 @@ function renderTrend() {
     context.font = "12px Segoe UI";
     series.forEach((point, index) => {
         const x = padding.left + (width / Math.max(1, series.length - 1)) * index;
-        context.fillText(point.label.replace("Mar ", ""), x - 18, canvas.height - 18);
+        context.fillText(shortTrendLabel(point.label), x - 18, canvas.height - 18);
     });
 }
 
@@ -459,20 +568,48 @@ function drawLine(context, values, width, height, padding, colour) {
 }
 
 function syncReadingSite() {
-    const readingForm = document.querySelector("#reading-form");
-    const asset = state.assets.find((item) => item.id === readingForm.assetId.value);
+    const assetSelect = getFormField(readingForm, "assetId");
+    const siteSelect = getFormField(readingForm, "siteId");
+    const asset = state.assets.find((item) => item.id === assetSelect.value);
     if (asset) {
-        readingForm.siteId.value = asset.siteId;
+        siteSelect.value = asset.siteId;
+        siteSelect.disabled = true;
+        return;
+    }
+    siteSelect.disabled = !siteSelect.options.length;
+}
+
+function syncWorkOrderSource() {
+    const alertSelect = getFormField(workOrderForm, "alertId");
+    const assetSelect = getFormField(workOrderForm, "assetId");
+    const titleInput = getFormField(workOrderForm, "title");
+    const selectedAlert = state.alerts.find((alert) => String(alert.id) === alertSelect.value);
+
+    if (selectedAlert) {
+        selectOptionValue(assetSelect, selectedAlert.assetId);
+        assetSelect.disabled = true;
+        if (!titleInput.value.trim()) {
+            titleInput.value = `Investigate ${selectedAlert.alertType} on ${selectedAlert.assetName}`;
+        }
+        return;
+    }
+
+    assetSelect.disabled = !Array.from(assetSelect.options).some((option) => option.value);
+    if (!assetSelect.value) {
+        selectOptionValue(assetSelect, state.selectedAssetId || state.assets[0]?.id);
     }
 }
 
 function buildTable(headers, rows) {
+    const bodyRows = rows.length
+        ? rows.join("")
+        : `<tr><td class="table-empty" colspan="${headers.length}">No records available yet.</td></tr>`;
     return `
         <table>
             <thead>
                 <tr>${headers.map((header) => `<th>${header}</th>`).join("")}</tr>
             </thead>
-            <tbody>${rows.join("")}</tbody>
+            <tbody>${bodyRows}</tbody>
         </table>
     `;
 }
@@ -494,8 +631,8 @@ document.addEventListener("click", async (event) => {
     const workOrderAction = event.target.closest("[data-wo-status]");
 
     if (demoUser) {
-        loginForm.username.value = demoUser.dataset.username;
-        loginForm.password.value = demoUser.dataset.password;
+        getFormField(loginForm, "username").value = demoUser.dataset.username;
+        getFormField(loginForm, "password").value = demoUser.dataset.password;
     }
 
     if (assetButton) {
@@ -537,7 +674,10 @@ document.addEventListener("click", async (event) => {
 loginForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     try {
-        await login(loginForm.username.value.trim(), loginForm.password.value);
+        await login(
+            fieldValue(loginForm, "username").trim(),
+            fieldValue(loginForm, "password")
+        );
     } catch (error) {
         showToast(error.message, true);
     }
@@ -548,22 +688,22 @@ logoutButton.addEventListener("click", () => {
     showToast("Signed out.");
 });
 
-document.querySelector("#reading-form").addEventListener("submit", async (event) => {
+readingForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
-    const selectedAssetId = form.assetId.value;
+    const selectedAssetId = fieldValue(form, "assetId");
     try {
         await apiFetch("/api/sensor-readings", {
             method: "POST",
             body: JSON.stringify({
                 assetId: selectedAssetId,
-                siteId: form.siteId.value,
-                timestamp: new Date(form.timestamp.value).toISOString(),
-                temperatureC: Number(form.temperatureC.value),
-                pressureKpa: Number(form.pressureKpa.value),
-                vibrationMmS: Number(form.vibrationMmS.value),
-                currentA: Number(form.currentA.value),
-                flowRateM3H: Number(form.flowRateM3H.value)
+                siteId: fieldValue(form, "siteId"),
+                timestamp: new Date(fieldValue(form, "timestamp")).toISOString(),
+                temperatureC: Number(fieldValue(form, "temperatureC")),
+                pressureKpa: Number(fieldValue(form, "pressureKpa")),
+                vibrationMmS: Number(fieldValue(form, "vibrationMmS")),
+                currentA: Number(fieldValue(form, "currentA")),
+                flowRateM3H: Number(fieldValue(form, "flowRateM3H"))
             })
         });
         form.reset();
@@ -576,22 +716,23 @@ document.querySelector("#reading-form").addEventListener("submit", async (event)
     }
 });
 
-document.querySelector("#reading-form").assetId.addEventListener("change", syncReadingSite);
+getFormField(readingForm, "assetId").addEventListener("change", syncReadingSite);
+getFormField(workOrderForm, "alertId").addEventListener("change", syncWorkOrderSource);
 
-document.querySelector("#workorder-form").addEventListener("submit", async (event) => {
+workOrderForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
     try {
         await apiFetch("/api/work-orders", {
             method: "POST",
             body: JSON.stringify({
-                alertId: form.alertId.value ? Number(form.alertId.value) : null,
-                assetId: form.assetId.value || null,
-                title: form.title.value,
-                description: form.description.value,
-                priority: form.priority.value,
-                assignedTo: form.assignedTo.value || null,
-                dueDate: form.dueDate.value || null
+                alertId: fieldValue(form, "alertId") ? Number(fieldValue(form, "alertId")) : null,
+                assetId: fieldValue(form, "assetId") || null,
+                title: fieldValue(form, "title"),
+                description: fieldValue(form, "description"),
+                priority: fieldValue(form, "priority"),
+                assignedTo: fieldValue(form, "assignedTo") || null,
+                dueDate: fieldValue(form, "dueDate") || null
             })
         });
         form.reset();
@@ -603,19 +744,19 @@ document.querySelector("#workorder-form").addEventListener("submit", async (even
     }
 });
 
-document.querySelector("#maintenance-form").addEventListener("submit", async (event) => {
+maintenanceForm.addEventListener("submit", async (event) => {
     event.preventDefault();
     const form = event.currentTarget;
     try {
         await apiFetch("/api/maintenance-records", {
             method: "POST",
             body: JSON.stringify({
-                workOrderId: Number(form.workOrderId.value),
-                rootCause: form.rootCause.value,
-                actionTaken: form.actionTaken.value,
-                downtimeMinutes: form.downtimeMinutes.value ? Number(form.downtimeMinutes.value) : null,
-                partsReplaced: form.partsReplaced.value || null,
-                notes: form.notes.value || null
+                workOrderId: Number(fieldValue(form, "workOrderId")),
+                rootCause: fieldValue(form, "rootCause"),
+                actionTaken: fieldValue(form, "actionTaken"),
+                downtimeMinutes: fieldValue(form, "downtimeMinutes") ? Number(fieldValue(form, "downtimeMinutes")) : null,
+                partsReplaced: fieldValue(form, "partsReplaced") || null,
+                notes: fieldValue(form, "notes") || null
             })
         });
         form.reset();

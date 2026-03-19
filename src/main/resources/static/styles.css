@@ -350,6 +350,11 @@ tbody tr:hover {
     font-size: 0.8rem;
 }
 
+.table-empty {
+    color: var(--muted);
+    text-align: center;
+}
+
 .ghost-button {
     padding: 0.7rem 0.95rem;
     color: var(--text);
@@ -394,6 +399,13 @@ tbody tr:hover {
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: rgba(255, 255, 255, 0.04);
     color: var(--text);
+}
+
+.form-grid select:disabled,
+.form-grid input:disabled,
+.form-grid textarea:disabled {
+    opacity: 0.78;
+    cursor: not-allowed;
 }
 
 .form-grid textarea {

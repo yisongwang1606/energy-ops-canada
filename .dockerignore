@@ -1,5 +1,13 @@
 target/
 .git/
+.idea/
+ml-service/.venv/
+spring-boot.log
+spring-boot.err.log
+spring-boot-*.log
+spring-boot-*.err.log
+ml-service/*.log
+ml-service/*.err.log
 __starter/
 __starter.zip
 README.md

@@ -7,6 +7,7 @@ import java.util.Locale;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import ca.yisong.energyops.api.ApiException;
 import ca.yisong.energyops.api.ApiModels.AlertResponse;
@@ -35,6 +36,7 @@ public class AlertService {
         this.cooldownHours = cooldownHours;
     }
 
+    @Transactional
     public Alert registerAlert(SensorReading reading, PredictionResult prediction, String actor, boolean logAudit) {
         if (!prediction.alertFlag() || prediction.alertType() == null || prediction.alertType().isBlank()) {
             return null;
@@ -105,6 +107,7 @@ public class AlertService {
                 .toList();
     }
 
+    @Transactional
     public AlertResponse updateAlert(Long id, AlertUpdateRequest request, String actor) {
         Alert alert = getRequiredAlert(id);
         String action = request.action().trim().toUpperCase(Locale.CANADA);

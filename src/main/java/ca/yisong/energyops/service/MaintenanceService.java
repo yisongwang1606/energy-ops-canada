@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import ca.yisong.energyops.api.ApiException;
 import ca.yisong.energyops.api.ApiModels.MaintenanceRecordRequest;
@@ -38,6 +39,7 @@ public class MaintenanceService {
                 .toList();
     }
 
+    @Transactional
     public MaintenanceRecordResponse createRecord(MaintenanceRecordRequest request, String actor) {
         WorkOrder workOrder = workOrderRepository.findById(request.workOrderId())
                 .orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "Work order not found."));

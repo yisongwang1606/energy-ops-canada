@@ -34,6 +34,11 @@ public class SecurityConfig {
                                 "/app.js",
                                 "/favicon.ico",
                                 "/api/auth/login",
+                                "/actuator",
+                                "/actuator/",
+                                "/actuator/health",
+                                "/actuator/info",
+                                "/actuator/prometheus",
                                 "/h2-console/**"
                         ).permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/health").permitAll()

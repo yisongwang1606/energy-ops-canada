@@ -2,8 +2,9 @@ package ca.yisong.energyops.service;
 
 import java.util.Locale;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
@@ -18,13 +19,14 @@ import ca.yisong.energyops.model.SeverityLevel;
 @Service
 public class PredictionService {
 
+    private static final Logger log = LoggerFactory.getLogger(PredictionService.class);
+
     private final boolean mlEnabled;
     private final RestClient restClient;
 
     public PredictionService(
             @Value("${energy.ml.enabled}") boolean mlEnabled,
-            @Value("${energy.ml.base-url}") String baseUrl,
-            RestTemplateBuilder builder
+            @Value("${energy.ml.base-url}") String baseUrl
     ) {
         this.mlEnabled = mlEnabled;
         this.restClient = RestClient.builder()
@@ -36,8 +38,8 @@ public class PredictionService {
         if (mlEnabled) {
             try {
                 return callExternalService(asset, request);
-            } catch (RestClientException ignored) {
-                // Fall back to local rules if the Python sidecar is unavailable.
+            } catch (RestClientException | ApiException | IllegalArgumentException exception) {
+                log.warn("ML sidecar unavailable for asset {}. Falling back to local scoring.", asset.getId(), exception);
             }
         }
         return evaluateLocally(asset, request);
@@ -125,8 +127,8 @@ public class PredictionService {
                 riskResponse.failureRisk(),
                 riskResponse.alertFlag(),
                 riskResponse.alertType(),
-                PriorityLevel.valueOf(riskResponse.priority()),
-                SeverityLevel.valueOf(riskResponse.severity()),
+                parseMlEnum(PriorityLevel.class, riskResponse.priority(), "priority"),
+                parseMlEnum(SeverityLevel.class, riskResponse.severity(), "severity"),
                 riskResponse.operatingStatus(),
                 riskResponse.recommendedAction(),
                 riskResponse.message()
@@ -229,6 +231,17 @@ public class PredictionService {
 
     private double round(double value) {
         return Math.round(value * 1000.0) / 1000.0;
+    }
+
+    private <E extends Enum<E>> E parseMlEnum(Class<E> enumType, String value, String fieldName) {
+        if (value == null || value.isBlank()) {
+            throw new ApiException(HttpStatus.BAD_GATEWAY, "ML service returned a blank " + fieldName + " value.");
+        }
+        try {
+            return Enum.valueOf(enumType, value.trim().toUpperCase(Locale.CANADA));
+        } catch (IllegalArgumentException exception) {
+            throw new ApiException(HttpStatus.BAD_GATEWAY, "ML service returned an unsupported " + fieldName + " value.");
+        }
     }
 
     private record MlScoreRequest(

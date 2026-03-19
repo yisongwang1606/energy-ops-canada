@@ -14,6 +14,7 @@ import org.apache.commons.csv.CSVRecord;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import ca.yisong.energyops.api.ApiException;
 import ca.yisong.energyops.api.ApiModels.SensorReadingRequest;
@@ -55,6 +56,7 @@ public class SensorReadingService {
         this.auditService = auditService;
     }
 
+    @Transactional
     public SensorReadingResponse ingest(SensorReadingRequest request, String actor) {
         Asset asset = getRequiredAsset(request.assetId());
         Site site = getRequiredSite(request.siteId());
@@ -80,6 +82,7 @@ public class SensorReadingService {
         return toResponse(saved);
     }
 
+    @Transactional
     public long importCsv(Resource resource, String actor) {
         if (resource == null || !resource.exists()) {
             throw new ApiException(HttpStatus.NOT_FOUND, "CSV seed file not found.");

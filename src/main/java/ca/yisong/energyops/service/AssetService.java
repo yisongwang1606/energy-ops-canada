@@ -5,6 +5,7 @@ import java.util.Locale;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import ca.yisong.energyops.api.ApiException;
 import ca.yisong.energyops.api.ApiModels.AssetRequest;
@@ -37,6 +38,7 @@ public class AssetService {
                 .toList();
     }
 
+    @Transactional
     public AssetResponse createOrUpdate(AssetRequest request, String actor) {
         Asset asset = assetRepository.findById(request.id()).orElseGet(Asset::new);
         boolean created = asset.getId() == null;
@@ -86,7 +88,7 @@ public class AssetService {
     private AssetStatus parseStatus(String value) {
         try {
             return AssetStatus.valueOf(value.trim().toUpperCase(Locale.CANADA));
-        } catch (Exception exception) {
+        } catch (IllegalArgumentException exception) {
             throw new ApiException(HttpStatus.BAD_REQUEST, "Unsupported asset status.");
         }
     }

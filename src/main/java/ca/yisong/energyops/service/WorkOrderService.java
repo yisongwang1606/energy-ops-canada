@@ -7,6 +7,7 @@ import java.util.Locale;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import ca.yisong.energyops.api.ApiException;
 import ca.yisong.energyops.api.ApiModels.WorkOrderCreateRequest;
@@ -62,6 +63,7 @@ public class WorkOrderService {
                 .toList();
     }
 
+    @Transactional
     public WorkOrderResponse createWorkOrder(WorkOrderCreateRequest request, String actor) {
         Alert alert = request.alertId() == null ? null : alertRepository.findById(request.alertId())
                 .orElseThrow(() -> new ApiException(HttpStatus.NOT_FOUND, "Alert not found."));
@@ -100,6 +102,7 @@ public class WorkOrderService {
         return toResponse(saved);
     }
 
+    @Transactional
     public WorkOrderResponse updateWorkOrder(Long id, WorkOrderUpdateRequest request, String actor) {
         WorkOrder workOrder = getRequiredWorkOrder(id);
         if (request.status() != null && !request.status().isBlank()) {
@@ -193,7 +196,7 @@ public class WorkOrderService {
         }
         try {
             return PriorityLevel.valueOf(requestedPriority.trim().toUpperCase(Locale.CANADA));
-        } catch (Exception exception) {
+        } catch (IllegalArgumentException exception) {
             throw new ApiException(HttpStatus.BAD_REQUEST, "Unsupported priority value.");
         }
     }
@@ -209,7 +212,7 @@ public class WorkOrderService {
     private WorkOrderStatus parseStatus(String value) {
         try {
             return WorkOrderStatus.valueOf(value.trim().toUpperCase(Locale.CANADA));
-        } catch (Exception exception) {
+        } catch (IllegalArgumentException exception) {
             throw new ApiException(HttpStatus.BAD_REQUEST, "Unsupported work order status.");
         }
     }

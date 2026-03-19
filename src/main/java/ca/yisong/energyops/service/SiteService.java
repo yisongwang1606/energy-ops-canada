@@ -5,6 +5,7 @@ import java.util.Locale;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import ca.yisong.energyops.api.ApiException;
 import ca.yisong.energyops.api.ApiModels.SiteRequest;
@@ -34,6 +35,7 @@ public class SiteService {
                 .toList();
     }
 
+    @Transactional
     public SiteResponse createOrUpdate(SiteRequest request, String actor) {
         Site site = siteRepository.findById(request.id()).orElseGet(Site::new);
         boolean created = site.getId() == null;
@@ -71,7 +73,7 @@ public class SiteService {
     private SiteStatus parseStatus(String value) {
         try {
             return SiteStatus.valueOf(value.trim().toUpperCase(Locale.CANADA));
-        } catch (Exception exception) {
+        } catch (IllegalArgumentException exception) {
             throw new ApiException(HttpStatus.BAD_REQUEST, "Unsupported site status.");
         }
     }

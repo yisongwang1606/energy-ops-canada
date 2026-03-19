@@ -1,15 +1,42 @@
 services:
+  energy-ops-db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: energyops
+      POSTGRES_USER: energyops
+      POSTGRES_PASSWORD: energyops
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U energyops -d energyops"]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+      start_period: 10s
+
   energy-ops-app:
     build:
       context: .
       dockerfile: Dockerfile
     environment:
-      ENERGY_ML_ENABLED: "true"
+      SPRING_PROFILES_ACTIVE: docker
+      ENERGY_DB_URL: jdbc:postgresql://energy-ops-db:5432/energyops
+      ENERGY_DB_USERNAME: energyops
+      ENERGY_DB_PASSWORD: energyops
       ENERGY_ML_BASE_URL: http://energy-ops-ml:8001
     ports:
       - "8080:8080"
     depends_on:
-      - energy-ops-ml
+      energy-ops-db:
+        condition: service_healthy
+      energy-ops-ml:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8080/actuator/health > /dev/null || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 8
+      start_period: 35s
 
   energy-ops-ml:
     build:
@@ -17,3 +44,9 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8001:8001"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health', timeout=3).read()"]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+      start_period: 10s

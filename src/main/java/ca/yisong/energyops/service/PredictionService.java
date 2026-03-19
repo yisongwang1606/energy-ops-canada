@@ -188,7 +188,7 @@ public class PredictionService {
             if (maxScore == tempScore) {
                 alertType = "High Temperature";
                 recommendedAction = "Inspect cooling efficiency and lubricants before the next shift handover.";
-                message = "Temperature exceeded the Canadian operating safety margin.";
+                message = "Temperature exceeded the operating safety margin.";
             } else if (maxScore == vibrationScore) {
                 alertType = "High Vibration";
                 recommendedAction = "Schedule a vibration check and confirm alignment or bearing wear.";

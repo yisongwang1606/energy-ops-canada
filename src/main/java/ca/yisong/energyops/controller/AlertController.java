@@ -44,7 +44,6 @@ public class AlertController {
     }
 
     @GetMapping(value = "/export", produces = "text/csv")
-    @PreAuthorize("hasAnyRole('ADMIN','OPERATIONS_ENGINEER')")
     public ResponseEntity<byte[]> exportAlerts() {
         byte[] content = alertService.exportAsCsv().getBytes(StandardCharsets.UTF_8);
         return ResponseEntity.ok()

@@ -96,7 +96,7 @@ public class DashboardService {
         double averageRisk = average(recent.stream().map(SensorReading::getPredictedFailureRisk).toList());
 
         List<MetricCard> metrics = List.of(
-                new MetricCard("Sites", String.valueOf(siteRepository.count()), "Canadian English + metric defaults", "neutral"),
+                new MetricCard("Sites", String.valueOf(siteRepository.count()), "Live operating footprint", "neutral"),
                 new MetricCard("Assets", String.valueOf(assetRepository.count()), assets.stream().filter(asset -> asset.getLatestFailureRisk() >= 0.25).count() + " monitored assets", "info"),
                 new MetricCard("Open Alerts", String.valueOf(openAlerts), "With six-hour deduplication window", openAlerts > 0 ? "warning" : "good"),
                 new MetricCard("Open Work Orders", String.valueOf(activeWorkOrders), "Tracks assignment, SLA, and closeout", activeWorkOrders > 0 ? "warning" : "good"),

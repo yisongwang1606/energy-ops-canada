@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy Ops Canada</title>
+    <title>Energy Ops Platform</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
@@ -11,14 +11,14 @@
         <aside class="sidebar">
             <div class="brand">
                 <p class="eyebrow">Energy Operations</p>
-                <h1>Canada Control Room</h1>
-                <p class="subtitle">English UI, Canadian metric units, Alberta demo data, and a full alert-to-work-order loop.</p>
+                <h1>Operations Hub</h1>
+                <p class="subtitle">Monitor asset health, prioritize alerts, and manage maintenance response from one workspace.</p>
             </div>
 
             <div class="locale-card">
-                <span class="locale-pill">en-CA</span>
-                <span class="locale-pill">Metric</span>
-                <span class="locale-pill">MT</span>
+                <span class="locale-pill">Asset Health</span>
+                <span class="locale-pill">Alert Queue</span>
+                <span class="locale-pill">Work Orders</span>
             </div>
 
             <nav class="nav">
@@ -46,12 +46,12 @@
                 </div>
                 <div class="topbar-meta">
                     <div class="meta-chip">
-                        <span class="meta-label">Timezone</span>
-                        <strong>America/Edmonton</strong>
+                        <span class="meta-label">Operations Window</span>
+                        <strong>Local Time</strong>
                     </div>
                     <div class="meta-chip">
-                        <span class="meta-label">Demo Scope</span>
-                        <strong>2 Sites / 5 Assets</strong>
+                        <span class="meta-label">Fleet Scope</span>
+                        <strong>2 Sites / 5 Critical Assets</strong>
                     </div>
                 </div>
             </header>
@@ -74,7 +74,7 @@
                         <div class="panel-header">
                             <div>
                                 <p class="eyebrow">Site Risk</p>
-                                <h3>Canadian Site Summary</h3>
+                                <h3>Site Summary</h3>
                             </div>
                         </div>
                         <div id="site-risk-list" class="stack-list"></div>
@@ -119,7 +119,7 @@
                         <div class="panel-header">
                             <div>
                                 <p class="eyebrow">Sites</p>
-                                <h3>Canadian Operations Footprint</h3>
+                                <h3>Operational Footprint</h3>
                             </div>
                         </div>
                         <div id="site-table" class="table-wrap"></div>
@@ -197,7 +197,7 @@
                 <article class="panel">
                     <div class="panel-header">
                         <div>
-                            <p class="eyebrow">Alert Centre</p>
+                            <p class="eyebrow">Alert Queue</p>
                             <h3>Open and Historical Alerts</h3>
                         </div>
                         <button id="export-alerts-button" class="ghost-button" type="button">Export CSV</button>
@@ -334,14 +334,14 @@
 
     <div id="login-overlay" class="login-overlay">
         <div class="login-card">
-            <p class="eyebrow">Energy Ops MVP</p>
-            <h2>Sign in to the Canadian demo workspace</h2>
-            <p class="subtitle">Use one of the seeded accounts below. Passwords are demo-only and documented in the README.</p>
+            <p class="eyebrow">Energy Ops Platform</p>
+            <h2>Sign in to the operations workspace</h2>
+            <p class="subtitle">Use one of the seeded accounts below to access monitoring, alerts, and maintenance workflows.</p>
 
             <div class="demo-users">
-                <button class="demo-user" type="button" data-username="admin.ca" data-password="admin123">admin.ca / admin123</button>
-                <button class="demo-user" type="button" data-username="ops.lead" data-password="ops123">ops.lead / ops123</button>
-                <button class="demo-user" type="button" data-username="morgan.tech" data-password="tech123">morgan.tech / tech123</button>
+                <button class="demo-user" type="button" data-username="admin.ca" data-password="admin123">Use Admin Account</button>
+                <button class="demo-user" type="button" data-username="ops.lead" data-password="ops123">Use Operations Lead</button>
+                <button class="demo-user" type="button" data-username="morgan.tech" data-password="tech123">Use Technician Account</button>
             </div>
 
             <form id="login-form" class="login-form">
@@ -353,7 +353,7 @@
                     <span>Password</span>
                     <input type="password" name="password" autocomplete="current-password" required>
                 </label>
-                <button class="primary-button" type="submit">Enter Control Room</button>
+                <button class="primary-button" type="submit">Enter Workspace</button>
             </form>
         </div>
     </div>

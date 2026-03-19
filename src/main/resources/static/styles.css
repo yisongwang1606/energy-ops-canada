@@ -401,6 +401,12 @@ tbody tr:hover {
     color: var(--text);
 }
 
+.form-grid select option,
+.form-grid select optgroup {
+    color: #000;
+    background: #fff;
+}
+
 .form-grid select:disabled,
 .form-grid input:disabled,
 .form-grid textarea:disabled {

@@ -97,15 +97,35 @@ class ApiWorkflowIntegrationTests {
                 .andExpect(jsonPath("$.alertId").isEmpty());
     }
 
+    @Test
+    void technicianCanExportAlertsCsv() throws Exception {
+        String token = loginAsTechnician();
+
+        mockMvc.perform(get("/api/alerts/export")
+                        .header("Authorization", bearer(token))
+                        .header("Accept", "text/csv"))
+                .andExpect(status().isOk())
+                .andExpect(result -> assertThat(result.getResponse().getContentType()).startsWith("text/csv"))
+                .andExpect(result -> assertThat(result.getResponse().getContentAsString()).contains("alert_code,alert_type"));
+    }
+
     private String loginAsOpsLead() throws Exception {
+        return login("ops.lead", "ops123");
+    }
+
+    private String loginAsTechnician() throws Exception {
+        return login("morgan.tech", "tech123");
+    }
+
+    private String login(String username, String password) throws Exception {
         MvcResult result = mockMvc.perform(post("/api/auth/login")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("""
                                 {
-                                  "username": "ops.lead",
-                                  "password": "ops123"
+                                  "username": "%s",
+                                  "password": "%s"
                                 }
-                                """))
+                                """.formatted(username, password)))
                 .andExpect(status().isOk())
                 .andReturn();
 

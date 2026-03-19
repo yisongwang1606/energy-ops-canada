@@ -98,18 +98,18 @@ public class DataInitializer implements ApplicationRunner {
         }
         siteService.createOrUpdate(new SiteRequest(
                 "SITE-CLY-01",
-                "Calgary North Pump Station",
-                "Calgary",
+                "North Pump Station",
+                "North District",
                 "AB",
                 "T2P 1J9",
                 "America/Edmonton",
                 "ACTIVE",
-                "Primary Alberta liquids handling site."
+                "Primary liquids handling site."
         ), "system");
         siteService.createOrUpdate(new SiteRequest(
                 "SITE-CLY-02",
-                "Foothills Compression Hub",
-                "Cochrane",
+                "Compression Hub",
+                "West District",
                 "AB",
                 "T4C 1A1",
                 "America/Edmonton",
@@ -203,7 +203,7 @@ public class DataInitializer implements ApplicationRunner {
                         "Recalibrated actuator feedback and completed a post-maintenance pressure check.",
                         38,
                         "Position sensor kit",
-                        "Closed with stable readings in Alberta Mountain Time demo window."
+                        "Closed with stable readings after the retest window."
                 ), "morgan.tech");
             }
         }

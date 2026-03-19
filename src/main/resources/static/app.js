@@ -90,6 +90,14 @@ const shortTrendLabel = (label) => {
     return parts.length >= 2 ? parts.slice(-2).join(" ") : label;
 };
 
+const formatRoleLabel = (value) =>
+    String(value || "")
+        .toLowerCase()
+        .split("_")
+        .filter(Boolean)
+        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+        .join(" ");
+
 const statusPill = (value) => `<span class="status-pill ${String(value).toLowerCase()}">${value}</span>`;
 
 const showToast = (message, isError = false) => {
@@ -135,7 +143,7 @@ async function apiFetch(path, options = {}) {
 
 function applySession() {
     sessionName.textContent = state.user ? state.user.fullName : "Not signed in";
-    sessionRole.textContent = state.user ? joinMeta(state.user.role, state.user.homeProvince) : "Awaiting login";
+    sessionRole.textContent = state.user ? formatRoleLabel(state.user.role) : "Awaiting login";
 }
 
 async function login(username, password) {
@@ -253,7 +261,7 @@ function renderSiteRisk() {
             <div class="risk-card-header">
                 <div>
                     <strong>${site.siteName}</strong>
-                    <p class="muted">${joinMeta(site.province, site.siteId)}</p>
+                    <p class="muted">Recent telemetry and risk exposure</p>
                 </div>
                 ${statusPill(`${site.openAlerts} open alerts`)}
             </div>
@@ -316,14 +324,14 @@ function renderRecentQueues() {
 
 function renderSites() {
     document.querySelector("#site-table").innerHTML = buildTable(
-        ["Site", "City", "Province", "Timezone", "Status"],
+        ["Site", "Area", "Timezone", "Status", "Notes"],
         state.sites.map((site) => `
             <tr>
-                <td><strong>${site.name}</strong><br><span class="muted">${site.id}</span></td>
+                <td><strong>${site.name}</strong></td>
                 <td>${site.city}</td>
-                <td>${site.province}</td>
                 <td>${site.timezone}</td>
                 <td>${statusPill(site.status)}</td>
+                <td>${site.notes || "-"}</td>
             </tr>
         `)
     );
@@ -464,7 +472,7 @@ function populateFormOptions() {
     const assetOptions = state.assets
         .map((asset) => `<option value="${asset.id}">${asset.name} (${joinMeta(asset.siteName, asset.id)})</option>`)
         .join("");
-    const siteOptions = state.sites.map((site) => `<option value="${site.id}">${site.name} (${site.province})</option>`).join("");
+    const siteOptions = state.sites.map((site) => `<option value="${site.id}">${site.name}</option>`).join("");
     const alertOptions = state.alerts
         .filter((alert) => alert.status !== "RESOLVED")
         .map((alert) => `<option value="${alert.id}">${joinMeta(alert.alertCode, alert.assetName, alert.alertType, alert.priority)}</option>`)
@@ -647,7 +655,7 @@ document.addEventListener("click", async (event) => {
                 body: JSON.stringify({
                     action: alertAction.dataset.alertAction,
                     assignedTo: alertAction.dataset.alertAction === "ASSIGN" ? "morgan.tech" : null,
-                    notes: "Updated from the Canadian operations dashboard."
+                    notes: "Updated from the operations dashboard."
                 })
             });
             await refreshData();
